@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_welcome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/image_text_id"
+        android:scaleType="fitStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/schloss" />
+    <TextView
+        android:id="@+id/textBelowImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="false"
+        android:text="@string/welcome_fragment"
+        android:textSize="16sp"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="220dp"
+        android:textColor="@color/wwu_grey"/>
+    <ImageView
+        android:id="@+id/image_swipe"
+        android:layout_marginTop="330dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="70dp"
+        android:src="@drawable/swipe"
+        android:paddingRight="110dp"
+        android:adjustViewBounds="true" />
+</RelativeLayout>
