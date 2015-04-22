@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps;
 
 import android.app.AlertDialog;
 import android.app.SearchManager;
@@ -12,13 +12,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.MainActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragmentActivity extends FragmentActivity {
+
+    public static String EXTRA_IMAGE_ID;
+    public static String EXTRA_ADDRESS;
+    public static String EXTRA_DESCRIPTION;
+    public static double EXTRA_LATITUDE;
+    public static double EXTRA_LONGITUDE;
+
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
@@ -133,14 +143,44 @@ public class MapsFragmentActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        String campus_address = getResources().getString(R.string.campus_address);
         Location campus  = new Location(LocationManager.NETWORK_PROVIDER);
-        //Juridicum
-        campus.setLatitude(51.962168);
-        campus.setLongitude(7.620359);
 
-        mMap.addMarker(new MarkerOptions().position(new LatLng(campus.getLatitude(), campus.getLongitude())).title(campus_address));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(campus.getLatitude(), campus.getLongitude()), 14));//Determines the initial zoom level
+        campus.setLatitude(EXTRA_LATITUDE);
+        campus.setLongitude(EXTRA_LONGITUDE);
+
+        Marker marker = mMap.addMarker(
+                new MarkerOptions()
+                .position(new LatLng(EXTRA_LATITUDE, EXTRA_LONGITUDE))
+                .title(EXTRA_DESCRIPTION)
+                .snippet("For details tap on marker")
+        );
+        //Always show text box
+        marker.showInfoWindow();
+
+        mMap.setOnMarkerClickListener(
+                new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(Marker marker) {
+                        goToMapLocationDetailsActivity();
+                        return false;
+                    }
+        });
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(campus.getLatitude(), campus.getLongitude()), 16)); //Determines the initial zoom level, the higher the closer
+    }
+
+    /**
+     * open Map Location Details Activity
+     */
+    public void goToMapLocationDetailsActivity() {
+        Intent intent = new Intent(this, MapLocationDetailsActivity.class);
+
+        MapLocationDetailsActivity.EXTRA_IMAGE_ID = EXTRA_IMAGE_ID;
+        MapLocationDetailsActivity.EXTRA_DESCRIPTION = EXTRA_DESCRIPTION;
+        MapLocationDetailsActivity.EXTRA_ADDRESS = EXTRA_ADDRESS;
+        MapLocationDetailsActivity.EXTRA_LATITUDE = EXTRA_LATITUDE;
+        MapLocationDetailsActivity.EXTRA_LONGITUDE = EXTRA_LONGITUDE;
+
+        startActivity(intent);
     }
 
     /**

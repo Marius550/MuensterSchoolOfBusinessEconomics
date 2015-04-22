@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="wwu_grey">#808080</color>
+    <color name="wwu_grey">#595959</color>
     <color name="wwu_light_grey">#eeeeee</color>
     <color name="wwu_green">#96C82C</color>
     <color name="ercis_red">#852339</color>

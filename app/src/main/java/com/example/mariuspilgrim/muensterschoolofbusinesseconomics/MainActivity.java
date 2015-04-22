@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -23,6 +22,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact.ContactFragment;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsActionBarActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 
 public class MainActivity extends Activity {
 
@@ -161,6 +164,13 @@ public class MainActivity extends Activity {
      */
     public void goToGoogleMapsFragmentActivity() {
         Intent intent = new Intent(this, MapsFragmentActivity.class);
+
+        MapsFragmentActivity.EXTRA_IMAGE_ID = "juridicum";
+        MapsFragmentActivity.EXTRA_DESCRIPTION = "Juridicum";
+        MapsFragmentActivity.EXTRA_ADDRESS = "Universitätsstraße 14, 48143 Münster";
+        MapsFragmentActivity.EXTRA_LATITUDE = 51.961952;
+        MapsFragmentActivity.EXTRA_LONGITUDE = 7.620341;
+
         startActivity(intent);
     }
 
@@ -179,19 +189,19 @@ public class MainActivity extends Activity {
                     selectItemDepartment(position);//Student Administration
                     break;
                 case 2:
-                    selectItemAffairs(position);//News
+                    selectItemNews(position);//News
                     break;
                 case 3:
-                    selectItemProspective(position);//Calendar
+                    selectItemNews(position);//Calendar
                     break;
                 case 4:
-                    selectItemResearch(position);//Directory
+                    selectItemNews(position);//Directory
                     break;
                 case 5:
                     goToGoogleMapsFragmentActivity();//WWU Map
                     break;
                 case 6:
-                    selectItemCampusFragment(position);//Dining
+                    selectItemWelcome(position);//Dining
                     break;
                 case 7:
                     selectItemContact(position);//Library
@@ -222,19 +232,6 @@ public class MainActivity extends Activity {
         setMenuDrawer(position);
     }
 
-    private void selectItemWWUMap(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new WelcomeFragment();
-        Bundle args = new Bundle();
-        args.putInt(WelcomeFragment.ARG_WELCOME_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
     private void selectItemDepartment(int position) {
         // update the main content by replacing fragments
         Fragment fragment = new DepartmentFragment();
@@ -248,63 +245,11 @@ public class MainActivity extends Activity {
         setMenuDrawer(position);
     }
 
-    private void selectItemAffairs(int position) {
+    private void selectItemNews(int position) {
         // update the main content by replacing fragments
         Fragment fragment = new AffairsFragment();
         Bundle args = new Bundle();
         args.putInt(AffairsFragment.ARG_AFFAIRS_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemProspective(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new ProspectiveFragment();
-        Bundle args = new Bundle();
-        args.putInt(ProspectiveFragment.ARG_PROSPECTIVE_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemResearch(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new ResearchFragment();
-        Bundle args = new Bundle();
-        args.putInt(ResearchFragment.ARG_RESEARCH_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemNews(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new NewsFragment();
-        Bundle args = new Bundle();
-        args.putInt(NewsFragment.ARG_NEWS_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemCampusFragment(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new CampusFragment();
-        Bundle args = new Bundle();
-        args.putInt(CampusFragment.ARG_CAMPUS_NUMBER, position);
         fragment.setArguments(args);
 
         FragmentManager fragmentManager = getFragmentManager();
@@ -396,69 +341,6 @@ public class MainActivity extends Activity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_affairs, container, false);
             int i = getArguments().getInt(ARG_AFFAIRS_NUMBER);
-            String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-            getActivity().setTitle(menuItem);
-
-            return rootView;
-        }
-    }
-
-    /**
-     * Fragment that appears in the "content_frame", shows a prospective fragment
-     */
-    public static class ProspectiveFragment extends Fragment {
-        public static final String ARG_PROSPECTIVE_NUMBER = "PROSPECTIVE_number";
-
-        public ProspectiveFragment() {
-            // Empty constructor required for fragment subclasses
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_prospective, container, false);
-            int i = getArguments().getInt(ARG_PROSPECTIVE_NUMBER);
-            String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-            getActivity().setTitle(menuItem);
-
-            return rootView;
-        }
-    }
-
-    /**
-     * Fragment that appears in the "content_frame", shows a research fragment fragment
-     */
-    public static class ResearchFragment extends Fragment {
-        public static final String ARG_RESEARCH_NUMBER = "RESEARCH_number";
-
-        public ResearchFragment() {
-            // Empty constructor required for fragment subclasses
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_research, container, false);
-            int i = getArguments().getInt(ARG_RESEARCH_NUMBER);
-            String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-            getActivity().setTitle(menuItem);
-
-            return rootView;
-        }
-    }
-
-    /**
-     * Fragment that appears in the "content_frame", shows a news fragment
-     */
-    public static class NewsFragment extends Fragment {
-        public static final String ARG_NEWS_NUMBER = "NEWS_number";
-
-        public NewsFragment() {
-            // Empty constructor required for fragment subclasses
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-            int i = getArguments().getInt(ARG_NEWS_NUMBER);
             String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
             getActivity().setTitle(menuItem);
 

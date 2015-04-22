@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps;
 
 /**
  * Created by mariuspilgrim on 19/03/15.
@@ -12,9 +12,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -26,6 +24,10 @@ import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.ExpandableListAdapter;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.MainActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
+
 public class MapLocationSelectionList extends Activity {
 
     ExpandableListAdapter listAdapter;
@@ -36,7 +38,7 @@ public class MapLocationSelectionList extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_audit_list);
+        setContentView(R.layout.activity_wwu_locations_list);
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -90,99 +92,72 @@ public class MapLocationSelectionList extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 // TODO Auto-generated method stub
-
                 switch(groupPosition) {
                     case 0:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Security Training");
-
-                            Intent intent = new Intent(getApplicationContext(), MapsFragmentActivity.class);
-                            startActivity(intent);
-
-                            System.out.println("Security Training");
+                            startMapsFragmentActivity("st_a_1", getResources().getString(R.string.map_location_address_am_stadtgraben_9),
+                                    getResources().getString(R.string.map_location_description_am_stadtgraben_9), 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Work Experience");
-                            System.out.println("Work Experience");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 2) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Educational Level");
-                            System.out.println("Educational Level");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 3) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Career Path");
-                            System.out.println("Career Path");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 4) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Customs");
-                            System.out.println("Customs");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     case 1:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Security Data");
-                            System.out.println("Security Data");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Emergency Installations");
-                            System.out.println("Emergency Installations");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     case 2:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Maintenance");
-                            System.out.println("Maintenance");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Emergency Installations");
-                            System.out.println("Emergency Installations");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     case 3:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Effectiveness");
-                            System.out.println("Effectiveness");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Interruptions");
-                            System.out.println("Interruptions");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     case 4:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Equipment");
-                            System.out.println("Equipment");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Training");
-                            System.out.println("Training");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     case 5:
                         if        (id == 0) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Installations");
-                            System.out.println("Installations");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 1) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Training");
-                            System.out.println("Training");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else if (id == 2) {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Update Intervals");
-                            System.out.println("Update Intervals");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         } else {
-                            startNewAuditCreationActivity(groupPosition, childPosition, id, "Other...");
-                            System.out.println("Other...");
+                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         }
                         break;
                     default:
-                        startNewAuditCreationActivity(groupPosition, childPosition, id, "Default");
-                        System.out.println("Default");
+                        startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
                         break;
                 }
                 Toast.makeText(
@@ -203,18 +178,19 @@ public class MapLocationSelectionList extends Activity {
     }
 
     /**
-     * Starts NewAuditCreationActivity and sets the corresponding category title
+     * Starts MapsFragmentActivity and sets the location's address, latitude and longitude
      */
-    public void startNewAuditCreationActivity(int groupPosition, int childPosition, long id, String child) {
-        /*
-        Intent intent = new Intent(getApplicationContext(), NewAuditCreationActivity.class);
+    public void startMapsFragmentActivity(String imageId, String address, String description, double latitude, double longitude) {
 
-        List<String> group_list_items_array = Arrays.asList(getResources().getStringArray(R.array.group_list_items_array));
-        NewAuditCreationActivity.GROUP_TITLE_NAME = group_list_items_array.get(groupPosition);
-        NewAuditCreationActivity.CHILD_TITLE_NAME = child;
+        Intent intent = new Intent(getApplicationContext(), MapsFragmentActivity.class);
+
+        MapsFragmentActivity.EXTRA_IMAGE_ID = imageId;
+        MapsFragmentActivity.EXTRA_DESCRIPTION = address;
+        MapsFragmentActivity.EXTRA_ADDRESS = description;
+        MapsFragmentActivity.EXTRA_LATITUDE = latitude;
+        MapsFragmentActivity.EXTRA_LONGITUDE = longitude;
 
         startActivity(intent);
-        */
     }
 
     @Override

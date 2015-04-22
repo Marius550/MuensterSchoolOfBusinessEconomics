@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,6 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
 public class ContactResultActivity extends Activity {
 
