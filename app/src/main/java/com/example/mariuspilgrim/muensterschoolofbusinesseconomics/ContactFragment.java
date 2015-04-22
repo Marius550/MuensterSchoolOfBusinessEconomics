@@ -43,7 +43,7 @@ public class ContactFragment extends Fragment {
         getActivity().setTitle(menuItem);
 
         TextView textView_welcome = (TextView) rootView.findViewById(R.id.welcome_info);
-        textView_welcome.setTextColor(Color.parseColor("#852339"));
+        //textView_welcome.setTextColor(Color.parseColor("#852339"));
         textView_welcome.setText(getResources().getText(R.string.welcome_info));
 
             Button button_setDefaultInputValues = (Button) rootView.findViewById(R.id.btn_setDefaultInputValues); //final Button?
