@@ -37,7 +37,7 @@
     <string name="result_email">Email address:&#160;</string>
     <string name="result_message">Entered message:&#160;</string>
 
-    <string name="contact_email_subject">Message from ERCIS app</string>
+    <string name="contact_email_subject">Message from WWU app</string>
 
     <string name="button_setDefaultText">Set default to Max Mustermann</string>
     <string name="button_send">Next</string>
