@@ -23,12 +23,15 @@ import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 public class ContactResultActivity extends Activity {
 
     public ContactResultActivity() {
-        //MainActivity m = new MainActivity();
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Necessary to execute search function
+        handleIntent(getIntent());
 
         try {
             setContentView(R.layout.fragment_contact_results);
@@ -68,18 +71,38 @@ public class ContactResultActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.menu_searchable, menu);
 
         // Associate searchable configuration with the SearchView
-        SearchManager searchManager =
-                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView =
-                (SearchView) menu.findItem(R.id.search).getActionView();
-        searchView.setSearchableInfo(
-                searchManager.getSearchableInfo(getComponentName()));
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
+        //before: return super.onCreateOptionsMenu(menu);
         return true;
-        //return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        System.out.println("What is this for?");
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            //use the query to search your data somehow
+            System.out.println("query: " + query);
+
+            Intent intentWebSearch = new Intent(Intent.ACTION_WEB_SEARCH);
+            intentWebSearch.putExtra(SearchManager.QUERY, query);
+            if (intentWebSearch.resolveActivity(getPackageManager()) != null) {
+                startActivity(intentWebSearch);
+            } else {
+                Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     @Override

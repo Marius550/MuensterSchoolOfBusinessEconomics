@@ -30,9 +30,6 @@ public class ContactFragment extends Fragment {
     public final static String EXTRA_MESSAGE_MESSAGE = "com.example.android.navigationdrawerexample.MESSAGE_MESSAGE";
 
     public ContactFragment() {
-        // Empty constructor required for fragment subclasses
-
-        //Testing method invocation of class Utilities
         Utilities u = new Utilities();
         u.testMethodExternal();
     }

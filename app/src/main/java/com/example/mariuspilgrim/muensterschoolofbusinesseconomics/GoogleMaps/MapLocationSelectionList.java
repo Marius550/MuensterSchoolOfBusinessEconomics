@@ -91,7 +91,6 @@ public class MapLocationSelectionList extends Activity {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                // TODO Auto-generated method stub
 
                 String lectureRoomsArray[] = getResources().getStringArray(R.array.group_list_child_item_array_1);
                 Integer idInt = (int) (long) id;

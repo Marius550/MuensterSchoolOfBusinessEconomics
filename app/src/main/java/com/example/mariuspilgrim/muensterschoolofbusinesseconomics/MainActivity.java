@@ -117,12 +117,12 @@ public class MainActivity extends Activity {
         case R.id.action_websearch:
             // create intent to perform web search for this title
             Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.putExtra(SearchManager.QUERY, "Marius");
+            intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
             // catch event that there's no activity to handle intent
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
-                Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
             }
             return true;
         case R.id.action_settings:
