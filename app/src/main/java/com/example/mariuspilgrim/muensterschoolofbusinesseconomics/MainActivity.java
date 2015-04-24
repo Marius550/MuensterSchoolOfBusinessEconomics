@@ -117,7 +117,7 @@ public class MainActivity extends Activity {
         case R.id.action_websearch:
             // create intent to perform web search for this title
             Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
+            intent.putExtra(SearchManager.QUERY, "Marius");
             // catch event that there's no activity to handle intent
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
@@ -184,34 +184,34 @@ public class MainActivity extends Activity {
 
             switch(position) {
                 case 0:
-                    selectItemWelcome(position);//Welcome
+                    selectItemWelcome(position);        //Welcome
                     break;
                 case 1:
-                    selectItemDepartment(position);//Student Administration
+                    selectItemDepartment(position);     //Student Administration
                     break;
                 case 2:
-                    selectItemNews(position);//News
+                    selectItemNews(position);           //News
                     break;
                 case 3:
-                    selectItemNews(position);//Calendar
+                    selectItemNews(position);           //Calendar
                     break;
                 case 4:
-                    selectItemNews(position);//Directory
+                    selectItemNews(position);           //Directory
                     break;
                 case 5:
-                    goToGoogleMapsFragmentActivity();//WWU Map
+                    goToGoogleMapsFragmentActivity();   //WWU Map
                     break;
                 case 6:
-                    selectItemWelcome(position);//Dining
+                    selectItemWelcome(position);        //Dining
                     break;
                 case 7:
-                    selectItemContact(position);//Library
+                    selectItemContact(position);        //Library
                     break;
                 case 8:
-                    selectItemWelcome(position);//Settings
+                    selectItemWelcome(position);        //Settings
                     break;
                 case 9:
-                    selectItemWelcome(position);//About
+                    selectItemWelcome(position);        //About
                     break;
                 default:
                     selectItemWelcome(position);

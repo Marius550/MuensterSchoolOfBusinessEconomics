@@ -14,6 +14,9 @@
         <item>About</item>
     </string-array>
 
+    <!-- Action Bar -->
+    <string name="search_hint_action_bar">Search Uni Münster</string>
+
     <string name="welcome_info">To contact the Münster School of Business and Economics, please use the following form:</string>
     <string name="edit_first_name"><b>First name</b></string>
     <string name="edit_last_name"><b>Last name</b></string>
@@ -49,7 +52,7 @@
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="action_settings">Change language</string>
     <string name="action_help">Help</string>
-    <string name="action_browser">Android browser</string>
+    <string name="action_browser">WWU Homepage</string>
     <string name="action_map">Juridicum map</string>
     <string name="action_wwu_locations_list">WWU Locations map</string>
     <string name="fragment_test">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
@@ -61,7 +64,7 @@
     <string name="affairs_fragment">Affairs \n Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
 
     <string name="error_oncreate_ContactResultFragmentActivity">onCreate error</string>
-    <string name="browser_default_address">https://www.google.com</string>
+    <string name="browser_default_address">https://www.wiwi.uni-muenster.de/fakultaet/en/startseite</string>
     <string name="title_activity_maps">Campus Map</string>
 
     <!-- Maps -->
@@ -332,6 +335,9 @@
         <item>Wohnanlage Stegerwaldstraße	Stegerwaldstraße 27</item>
         <item>Wohnanlage Wilhelmskamp	Steinfurter Str. 67-81</item>
     </string-array>
+    <string name="title_activity_searchable">SearchableActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
     <!-- git test Macbook-->
 </resources>
