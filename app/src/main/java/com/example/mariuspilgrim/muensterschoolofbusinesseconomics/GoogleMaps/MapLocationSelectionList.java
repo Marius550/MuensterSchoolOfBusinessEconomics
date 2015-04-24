@@ -92,73 +92,21 @@ public class MapLocationSelectionList extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 // TODO Auto-generated method stub
+
+                String lectureRoomsArray[] = getResources().getStringArray(R.array.group_list_child_item_array_1);
+                Integer idInt = (int) (long) id;
+
                 switch(groupPosition) {
                     case 0:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", getResources().getString(R.string.map_location_address_am_stadtgraben_9),
-                                    getResources().getString(R.string.map_location_description_am_stadtgraben_9), 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 2) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 3) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 4) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
+                        if (id ==  0 || id ==  1 || id ==  2 || id ==  3 || id ==  4 || id ==  5 || id ==  6 || id ==  7 || id ==  8 || id ==  9 || id == 10
+                         || id == 11 || id == 12 || id == 13 || id == 14 || id == 15 || id == 16 || id == 17 || id == 18 || id == 19 || id == 20 || id == 21)
+                        {
+                            String[] separatedLectureRoomsArray = lectureRoomsArray[idInt].split(";");
+                            startMapsFragmentActivity(separatedLectureRoomsArray[0], separatedLectureRoomsArray[1], separatedLectureRoomsArray[2],
+                                                      separatedLectureRoomsArray[3], separatedLectureRoomsArray[4], separatedLectureRoomsArray[5]);
                         }
                         break;
-                    case 1:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        }
-                        break;
-                    case 2:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        }
-                        break;
-                    case 3:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        }
-                        break;
-                    case 4:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        }
-                        break;
-                    case 5:
-                        if        (id == 0) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 1) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else if (id == 2) {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        } else {
-                            startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        }
-                        break;
-                    default:
-                        startMapsFragmentActivity("st_a_1", "Am Stadtgraben 9", "FB Wirtschaftswissenschaften Erdgeschoss", 51.962168, 7.620359);
-                        break;
+                    //case 1: for next group
                 }
                 Toast.makeText(
                         getApplicationContext(),
@@ -171,7 +119,6 @@ public class MapLocationSelectionList extends Activity {
                 return false;
             }
         });
-
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
@@ -180,15 +127,18 @@ public class MapLocationSelectionList extends Activity {
     /**
      * Starts MapsFragmentActivity and sets the location's address, latitude and longitude
      */
-    public void startMapsFragmentActivity(String imageId, String address, String description, double latitude, double longitude) {
+    public void startMapsFragmentActivity(String imageId, String title, String address, String description, String latitudeString, String longitudeString) {
 
         Intent intent = new Intent(getApplicationContext(), MapsFragmentActivity.class);
 
         MapsFragmentActivity.EXTRA_IMAGE_ID = imageId;
-        MapsFragmentActivity.EXTRA_DESCRIPTION = address;
-        MapsFragmentActivity.EXTRA_ADDRESS = description;
-        MapsFragmentActivity.EXTRA_LATITUDE = latitude;
-        MapsFragmentActivity.EXTRA_LONGITUDE = longitude;
+        MapsFragmentActivity.EXTRA_TITLE = title;
+        MapsFragmentActivity.EXTRA_ADDRESS = address;
+        MapsFragmentActivity.EXTRA_DESCRIPTION = description;
+        double latitudeDouble = Double.parseDouble(latitudeString);
+        MapsFragmentActivity.EXTRA_LATITUDE = latitudeDouble;
+        double longitudeDouble = Double.parseDouble(longitudeString);
+        MapsFragmentActivity.EXTRA_LONGITUDE = longitudeDouble;
 
         startActivity(intent);
     }
@@ -259,7 +209,7 @@ public class MapLocationSelectionList extends Activity {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        List<String> group_list_items_array = Arrays.asList(getResources().getStringArray(R.array.group_list_items_array));
+        List<String> group_list_items_array        = Arrays.asList(getResources().getStringArray(R.array.group_list_items_array));
         List<String> group_list_child_item_array_1 = Arrays.asList(getResources().getStringArray(R.array.group_list_child_item_array_1));
         List<String> group_list_child_item_array_2 = Arrays.asList(getResources().getStringArray(R.array.group_list_child_item_array_2));
         List<String> group_list_child_item_array_3 = Arrays.asList(getResources().getStringArray(R.array.group_list_child_item_array_3));
@@ -272,10 +222,11 @@ public class MapLocationSelectionList extends Activity {
         }
 
         // Adding child data
-        List<String> Employees = new ArrayList<String>();
+        List<String> LectureRooms = new ArrayList<String>();
         for(int i = 0; i < group_list_child_item_array_1.size(); i++) {
-            Employees.add(group_list_child_item_array_1.get(i));
-            listDataChild.put(listDataHeader.get(0), Employees);
+            //Only add title and address of relevant array item
+            LectureRooms.add(group_list_child_item_array_1.get(i).split(";")[1] + " - " + group_list_child_item_array_1.get(i).split(";")[2]);
+            listDataChild.put(listDataHeader.get(0), LectureRooms);
         }
 
         List<String> Building = new ArrayList<String>();

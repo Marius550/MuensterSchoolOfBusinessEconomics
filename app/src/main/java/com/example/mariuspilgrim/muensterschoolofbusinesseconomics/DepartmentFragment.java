@@ -34,11 +34,10 @@ public class DepartmentFragment extends Fragment {
         int i = getArguments().getInt(ARG_DEPARTMENT_NUMBER);
         String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
         getActivity().setTitle(menuItem)
-        */
         getActivity().setTitle(getResources().getString(R.string.menu_item_title_alternative));
+        */
 
         TextView textView_welcome = (TextView) rootView.findViewById(R.id.department_prof_list);
-        textView_welcome.setTextColor(Color.parseColor("#852339"));
 
         String prof_list = getResources().getText(R.string.department_fragment_prof_list)
                 + "<br/>"

@@ -166,10 +166,11 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, MapsFragmentActivity.class);
 
         MapsFragmentActivity.EXTRA_IMAGE_ID = "juridicum";
-        MapsFragmentActivity.EXTRA_DESCRIPTION = "Juridicum";
+        MapsFragmentActivity.EXTRA_TITLE = "Juridicum";
+        MapsFragmentActivity.EXTRA_DESCRIPTION = "JUR 1, JUR 2, JUR 3, JUR 4";
         MapsFragmentActivity.EXTRA_ADDRESS = "Universitätsstraße 14, 48143 Münster";
-        MapsFragmentActivity.EXTRA_LATITUDE = 51.961952;
-        MapsFragmentActivity.EXTRA_LONGITUDE = 7.620341;
+        MapsFragmentActivity.EXTRA_LATITUDE = 51.961965;
+        MapsFragmentActivity.EXTRA_LONGITUDE = 7.619804;
 
         startActivity(intent);
     }

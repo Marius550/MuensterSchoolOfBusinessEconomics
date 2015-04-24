@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsFragmentActivity extends FragmentActivity {
 
     public static String EXTRA_IMAGE_ID;
+    public static String EXTRA_TITLE;
     public static String EXTRA_ADDRESS;
     public static String EXTRA_DESCRIPTION;
     public static double EXTRA_LATITUDE;
@@ -151,7 +152,7 @@ public class MapsFragmentActivity extends FragmentActivity {
         Marker marker = mMap.addMarker(
                 new MarkerOptions()
                 .position(new LatLng(EXTRA_LATITUDE, EXTRA_LONGITUDE))
-                .title(EXTRA_DESCRIPTION)
+                .title(EXTRA_TITLE + " - " + EXTRA_ADDRESS)
                 .snippet("For details tap on marker")
         );
         //Always show text box
@@ -175,8 +176,9 @@ public class MapsFragmentActivity extends FragmentActivity {
         Intent intent = new Intent(this, MapLocationDetailsActivity.class);
 
         MapLocationDetailsActivity.EXTRA_IMAGE_ID = EXTRA_IMAGE_ID;
-        MapLocationDetailsActivity.EXTRA_DESCRIPTION = EXTRA_DESCRIPTION;
+        MapLocationDetailsActivity.EXTRA_TITLE = EXTRA_TITLE;
         MapLocationDetailsActivity.EXTRA_ADDRESS = EXTRA_ADDRESS;
+        MapLocationDetailsActivity.EXTRA_DESCRIPTION = EXTRA_DESCRIPTION;
         MapLocationDetailsActivity.EXTRA_LATITUDE = EXTRA_LATITUDE;
         MapLocationDetailsActivity.EXTRA_LONGITUDE = EXTRA_LONGITUDE;
 

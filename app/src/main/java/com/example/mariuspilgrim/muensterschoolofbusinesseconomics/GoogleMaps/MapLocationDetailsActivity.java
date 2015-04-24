@@ -20,6 +20,7 @@ import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 public class MapLocationDetailsActivity extends Activity {
 
     public static String EXTRA_IMAGE_ID;
+    public static String EXTRA_TITLE;
     public static String EXTRA_ADDRESS;
     public static String EXTRA_DESCRIPTION;
     public static double EXTRA_LATITUDE;
@@ -35,6 +36,10 @@ public class MapLocationDetailsActivity extends Activity {
             ImageView imageView = (ImageView) findViewById(R.id.wwu_map_location_details_image);
             int resID = getResources().getIdentifier(EXTRA_IMAGE_ID , "drawable", getPackageName());
             imageView.setImageResource(resID);
+
+            TextView textViewTitle = (TextView) findViewById(R.id.wwu_map_location_details_title);
+            String textViewTitleHtml = "<b>" + getResources().getString(R.string.map_location_details_view_title) + "</b>" + EXTRA_TITLE;
+            textViewTitle.append(Html.fromHtml(textViewTitleHtml));
 
             TextView textViewAddress = (TextView) findViewById(R.id.wwu_map_location_details_address);
             String textViewAddressHtml = "<b>" + getResources().getString(R.string.map_location_details_view_address) + "</b>" + EXTRA_ADDRESS;
@@ -59,7 +64,7 @@ public class MapLocationDetailsActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
+        inflater.inflate(R.menu.main_activity_maps_details, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -78,14 +83,8 @@ public class MapLocationDetailsActivity extends Activity {
                     Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
                 }
                 return true;
-            case R.id.action_settings:
-                openAndroidSettings();
-                return true;
-            case R.id.action_browser:
-                openAndroidBrowser();
-                return true;
-            case R.id.action_map:
-                goToGoogleMapsActionBar();
+            case R.id.action_wwu_locations_list_details:
+                openExpandableListView();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -93,25 +92,10 @@ public class MapLocationDetailsActivity extends Activity {
     }
 
     /**
-     * Opens Android device settings
+     * open expandable list view
      */
-    public void openAndroidSettings() {
-        startActivityForResult(new Intent(Settings.ACTION_SETTINGS), 0);
-    }
-
-    /**
-     * Opens Android device browser
-     */
-    public void openAndroidBrowser() {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.browser_default_address)));
-        startActivity(browserIntent);
-    }
-
-    /**
-     * Opens google maps fragment activity
-     */
-    public void goToGoogleMapsActionBar() {
-        Intent intent = new Intent(this, MapsFragmentActivity.class);
+    public void openExpandableListView() {
+        Intent intent = new Intent(this, MapLocationSelectionList.class);
         startActivity(intent);
     }
 
