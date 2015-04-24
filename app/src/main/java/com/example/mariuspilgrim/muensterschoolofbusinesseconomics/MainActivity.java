@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -21,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact.ContactFragment;
@@ -43,6 +45,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         PACKAGE_NAME = getApplicationContext().getPackageName();
+
+        //Necessary to execute search function
+        handleIntent(getIntent());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -93,7 +98,37 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
-        return super.onCreateOptionsMenu(menu);
+
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_websearch).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        //before: return super.onCreateOptionsMenu(menu);
+        return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        System.out.println("What is this for?");
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            //query = keyboard input + Uni Münster
+            String query = intent.getStringExtra(SearchManager.QUERY) + getResources().getString(R.string.search_added_string_uni_muenster);
+            //use the query to search your data somehow
+
+            Intent intentWebSearch = new Intent(Intent.ACTION_WEB_SEARCH);
+            intentWebSearch.putExtra(SearchManager.QUERY, query);
+            if (intentWebSearch.resolveActivity(getPackageManager()) != null) {
+                startActivity(intentWebSearch);
+            } else {
+                Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
@@ -114,17 +149,7 @@ public class MainActivity extends Activity {
         }
         // Handle action buttons
         switch(item.getItemId()) {
-        case R.id.action_websearch:
-            // create intent to perform web search for this title
-            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
-            // catch event that there's no activity to handle intent
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
-            }
-            return true;
+
         case R.id.action_settings:
              openAndroidSettings();
                 return true;

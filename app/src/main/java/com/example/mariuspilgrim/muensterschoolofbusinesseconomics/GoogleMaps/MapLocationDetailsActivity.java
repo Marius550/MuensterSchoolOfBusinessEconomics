@@ -80,7 +80,7 @@ public class MapLocationDetailsActivity extends Activity {
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 } else {
-                    Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
                 }
                 return true;
             case R.id.action_wwu_locations_list_details:

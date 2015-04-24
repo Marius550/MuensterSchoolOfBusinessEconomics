@@ -16,6 +16,8 @@
 
     <!-- Action Bar -->
     <string name="search_hint_action_bar">Suche in Uni Münster</string>
+    <string name="search_added_string_uni_muenster">&#160;Uni Münster</string>
+    <string name="search_added_string_ulb_muenster">&#160;ULB Münster</string>
 
     <string name="welcome_info">Um Kontakt mit der wirtschaftswissenschaftlichen Fakultät der WWU Münster aufzunehmen verwenden Sie bitte das folgende Formular:</string>
     <string name="edit_first_name"><b>Vorname</b></string>
@@ -49,7 +51,7 @@
     <string name="drawer_open">Öffne navigation drawer</string>
     <string name="drawer_close">Schliesse navigation drawer</string>
     <string name="action_websearch">Web Suche</string>
-    <string name="app_not_available">Entschuldigung, es ist kein Internet browser verfügbar</string>
+    <string name="browser_not_available">Entschuldigung, es ist kein Internet browser verfügbar</string>
     <string name="action_settings">Change language</string>
     <string name="action_help">Hilfe</string>
     <string name="action_browser">WWU Homepage</string>

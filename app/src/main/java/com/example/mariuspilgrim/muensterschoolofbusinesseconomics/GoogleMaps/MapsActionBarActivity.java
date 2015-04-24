@@ -67,7 +67,7 @@ public class MapsActionBarActivity extends FragmentActivity {
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 } else {
-                    Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
                 }
                 return true;
             case R.id.action_help:

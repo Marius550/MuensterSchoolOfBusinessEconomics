@@ -16,6 +16,8 @@
 
     <!-- Action Bar -->
     <string name="search_hint_action_bar">Search Uni Münster</string>
+    <string name="search_added_string_uni_muenster">&#160;Uni Münster</string>
+    <string name="search_added_string_ulb_muenster">&#160;ULB Münster</string>
 
     <string name="welcome_info">To contact the Münster School of Business and Economics, please use the following form:</string>
     <string name="edit_first_name"><b>First name</b></string>
@@ -335,9 +337,6 @@
         <item>Wohnanlage Stegerwaldstraße	Stegerwaldstraße 27</item>
         <item>Wohnanlage Wilhelmskamp	Steinfurter Str. 67-81</item>
     </string-array>
-    <string name="title_activity_searchable">SearchableActivity</string>
-
-    <string name="hello_world">Hello world!</string>
 
     <!-- git test Macbook-->
 </resources>
