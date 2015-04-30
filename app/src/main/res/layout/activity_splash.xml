@@ -9,6 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/splash_1" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/splash_4" />
 
 </RelativeLayout>

@@ -201,6 +201,14 @@ public class MainActivity extends Activity {
     }
 
     /**
+     * Opens About Selection List activity
+     */
+    public void goToAboutActivity() {
+        Intent intent = new Intent(this, AboutSelectionList.class);
+        startActivity(intent);
+    }
+
+    /**
      * The click listener for ListView in the navigation drawer
      */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -236,7 +244,7 @@ public class MainActivity extends Activity {
                     selectItemWelcome(position);        //Settings
                     break;
                 case 9:
-                    selectItemWelcome(position);        //About
+                    goToAboutActivity();                //About
                     break;
                 default:
                     selectItemWelcome(position);
