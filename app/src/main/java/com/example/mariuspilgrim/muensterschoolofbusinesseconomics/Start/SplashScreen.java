@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Start;
 
 /**
  * Created by mariuspilgrim on 4/9/15.
@@ -7,6 +7,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.MainActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
 public class SplashScreen extends Activity {
 

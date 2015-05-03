@@ -25,8 +25,8 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact.ContactFragment;
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsActionBarActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 
 public class MainActivity extends Activity {

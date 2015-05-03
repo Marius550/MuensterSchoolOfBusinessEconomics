@@ -24,7 +24,6 @@ import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.ExpandableListAdapter;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.MainActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 

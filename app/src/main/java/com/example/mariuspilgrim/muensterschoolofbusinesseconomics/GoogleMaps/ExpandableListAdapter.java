@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 

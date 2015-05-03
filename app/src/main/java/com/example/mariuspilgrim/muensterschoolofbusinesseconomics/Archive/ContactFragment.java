@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact.ContactResultActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Utilities;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

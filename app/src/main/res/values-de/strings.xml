@@ -34,7 +34,7 @@
 
     <string name="contact_email_subject">Nachricht von der WWU App</string>
 
-    <string name="button_setDefaultText">Standard Max Mustermann</string>
+    <string name="button_setDefaultText">Demo Button</string>
     <string name="button_send">Weiter</string>
     <string name="button_sendAsEmail">Email senden</string>
     <string name="email_chooser">Email senden ...</string>
@@ -52,7 +52,7 @@
     <string name="drawer_close">Schliesse navigation drawer</string>
     <string name="action_websearch">Web Suche</string>
     <string name="browser_not_available">Entschuldigung, es ist kein Internet browser verfügbar</string>
-    <string name="action_settings">Change language</string>
+    <string name="action_settings">Sprache ändern</string>
     <string name="action_help">Hilfe</string>
     <string name="action_browser">WWU Homepage</string>
     <string name="action_map">Juridicum Karte</string>
@@ -80,6 +80,9 @@
     <string name="map_title_muenster_school_business_economics">Wirtschaftswissenschaftliche Fakultät WWU Münster</string>
     <string name="map_address_juridicum">Universitätsstraße 14, 48143 Münster</string>
     <string name="title_activity_map_location_details">Standort Details</string>
+    <string name="title_about">About</string>
+    <string name="title_activity_contact">Ihre Kritik</string>
+    <string name="title_activity_about_wwu">About WWU</string>
 
     <string name="map_location_details_view_title">Standort:&#160;</string>
     <string name="map_location_details_view_address">Adresse:&#160;</string>
@@ -89,6 +92,21 @@
 
     <!-- Expandable List -->
     <string name="title_activity_expandable_list">WWU Standorte</string>
+
+    <!-- About List -->
+    <string-array name="about_list_items_array">
+        <item>Über diese App</item>
+        <item>Über die Universität Münster</item>
+        <item>Kritik zur App</item>
+    </string-array>
+
+    <!-- About WWU -->
+    <string name="title_activity_about_app">Über diese App</string>
+    <string name="about_app_content">This app was developed by a pretty awesome guy!</string>
+
+    <!-- About WWU -->
+    <string name="about_wwu_content">
+Die Westfälische Wilhelms-Universität in Münster – auch kurz WWU (Münster) oder Uni(versität) Münster genannt – ist mit rund 42.592 Studierenden (Stand: WS 2013/14) und rund 250 Studiengängen in 15 Fachbereichen eine der größten deutschen Universitäten. Ihr Namensgeber war Kaiser Wilhelm II. Die Hochschulleitung und -verwaltung befinden sich im Gebäude des ehemaligen fürstbischöflichen Schlosses. \n Die Westfälische Wilhelms-Universität ist die fünftgrößte Universität Deutschlands. Rund 7.300 Abschlüsse werden hier pro Jahr erworben (Stand 2010). \n Die WWU ist keine Campus-Universität. Ihre 217 Gebäude verteilen sich über das Stadtgebiet von Münster, davon etliche im Bereich zwischen Schlossplatz, wo hauptsächlich die Fachbereiche Biologie und Germanistik zu finden sind, und Domplatz, wo sich unter anderem das Haupthörsaalgebäude, die Universitätsbibliothek, das Juridicum (Fachbereiche Jura und Wirtschaftswissenschaften) sowie die Fachbereiche Erziehungswissenschaft und Sozialwissenschaften, Geschichte/Philosophie, Theologie und Philologie befinden. Das Universitätsklinikum Münster, die Fachbereiche Psychologie und Sportwissenschaft, Mathematik und Informatik, Chemie und Pharmazie, Physik sowie Teile der Geowissenschaften befinden sich westlich des Schlosses in der Nähe des Coesfelder Kreuzes. Weitere Institute sind auf dem Leonardo-Campus, der ehemaligen, zwischen 1888 und 1901 erbauten Von-Einem Kavalleriekaserne, untergebracht, den sich Universität, Fachhochschule und Kunstakademie teilen, sowie am Hüfferstift und in der Nähe des Aasees. \n Die Westfälische Wilhelms-Universität ist sowohl in der Grundlagenforschung als auch in der angewandten Wissenschaft tätig. Das Programm der Universität umfasst ein Exzellenzcluster, elf Sonderforschungsbereiche, neun DFG-Graduiertenkollegs, vier DFG-Schwerpunktprogramme, sechs Graduate Schools, sieben Nachwuchsgruppen und 17 Forschungszentren (Stand 2009). \n Die Universität hat Partnerschaftsabkommen mit rund 400 in- und ausländischen Universitäten sowie Doppeldiplom- und Doppelbachelor-Abkommen (u.a. in Philologie, Politikwissenschaft, Rechtswissenschaften und Wirtschaftswissenschaften) mit ausländischen Universitäten abgeschlossen. Rund 3.135 ausländische Studenten vor allem aus Osteuropa und Asien stellen etwa acht Prozent der Studierenden an der Universität. Pro Semester studieren gut 2.000 münstersche Studenten im Ausland. \n Im Rahmen des Projekts „Junioruni“ können begabte Schüler der 11. und 12. Klasse an Vorlesungen und Kursen der Universität teilnehmen. \n Zehn Mal im Jahr veranstaltet die Hochschule mit der „Kinder-Uni Münster“ jeweils 45-minütige Vorlesungen für acht- bis zwölfjährige Schüler. \n Das Geologisch-Paläontologische Museum der Westfälischen Wilhelms-Universität. \n Die Universität betreibt vier öffentliche Museen – das Archäologische, das Geologisch-Paläontologische, das Mineralogische und das Bibelmuseum – sowie einen Botanischen Garten.</string>
 
     <!-- Expandable list group items -->
     <string-array name="group_list_items_array">
@@ -338,5 +356,4 @@
         <item>Wohnanlage Wilhelmskamp	Steinfurter Str. 67-81</item>
     </string-array>
 
-    <!-- git test Macbook-->
 </resources>

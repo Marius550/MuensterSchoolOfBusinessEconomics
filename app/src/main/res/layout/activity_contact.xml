@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_contact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/wwu_grey"/>
+    <EditText
+        android:id="@+id/edit_first_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_first_name"
+        android:textSize="16sp" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_last_name"
+        android:hint="@string/edit_last_name"
+        android:textSize="16sp" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_email"
+        android:hint="@string/edit_email"
+        android:textSize="16sp" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_message"
+        android:hint="@string/edit_message"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btn_setDefaultInputValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_setDefaultText"
+        android:onClick="setDefaultInputValues"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btn_sendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage"
+        android:textSize="16sp" />
+</LinearLayout>

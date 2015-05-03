@@ -2,45 +2,32 @@ package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.Html;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
 public class ContactResultActivity extends Activity {
 
     public ContactResultActivity() {
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Necessary to execute search function
-        handleIntent(getIntent());
-
         try {
-            setContentView(R.layout.fragment_contact_results);
-
             Intent intent = getIntent();
-            String messageFirstName = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_FIRST_NAME);
-            String messageLastName = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_LAST_NAME);
-            String messageEmail = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_EMAIL);
-            String messageMessage= intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_MESSAGE);
+            String messageFirstName = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_FIRST_NAME);
+            String messageLastName = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_LAST_NAME);
+            String messageEmail = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_EMAIL);
+            String messageMessage= intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_MESSAGE);
+
+            setContentView(R.layout.activity_contact_results);
 
             TextView textViewFirstName = (TextView) findViewById(R.id.result_first_name);
             TextView textViewLastName = (TextView) findViewById(R.id.result_last_name);
@@ -57,7 +44,7 @@ public class ContactResultActivity extends Activity {
             textViewEmail.append(Html.fromHtml(textViewEmailHtml));
             textViewMessage.append(Html.fromHtml(textViewMessageHtml));
 
-            //throw new RuntimeException(); //triggers Exception
+            //throw new RuntimeException();
         } catch (Exception ex) {
             messageBox(getResources().getString(R.string.error_oncreate_ContactResultFragmentActivity), ex.getMessage());
             ex.printStackTrace();
@@ -67,6 +54,48 @@ public class ContactResultActivity extends Activity {
         getActionBar().setHomeButtonEnabled(true);
     }
 
+    public void sendAsEmail(View view) {
+        Intent intent = getIntent();
+        String messageFirstName = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_FIRST_NAME);
+        String messageLastName = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_LAST_NAME);
+        String messageEmail = intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_EMAIL);
+        String messageMessage= intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_MESSAGE);
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto","mariuspilgrim@icloud.com", null)); //This should be the WWU email address
+
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.contact_email_subject));
+
+        String completeEmailMessage = "<b>" + messageFirstName + "</b><br/><b>" + messageLastName + "</b><br/><b>" + messageEmail + "</b><br/>" + messageMessage;
+
+            emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(completeEmailMessage));
+        startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.email_chooser)));
+    }
+
+    public void backToSendMessage(View view) {
+        setContentView(R.layout.activity_contact);
+        finish();
+    }
+
+    /**
+     * Creating exception handling box
+     * @param method
+     * @param message
+     */
+    private void messageBox(String method, String message) {
+        AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
+        messageBox.setTitle(method);
+        messageBox.setMessage(message);
+        messageBox.setCancelable(false);
+        messageBox.setNeutralButton("OK", null);
+        messageBox.show();
+    }
+
+}
+    //Necessary to execute search function
+    //handleIntent(getIntent());
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -125,70 +154,20 @@ public class ContactResultActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
+    */
 
-    /**
-     * Opens Android device settings
-     */
+    /*
     public void openAndroidSettings() {
         startActivityForResult(new Intent(Settings.ACTION_SETTINGS), 0);
     }
 
-    /**
-     * Opens Android device browser
-     */
     public void openAndroidBrowser() {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.browser_default_address)));
         startActivity(browserIntent);
     }
 
-    /**
-     * Opens google maps fragment activity
-     */
     public void goToGoogleMapsActionBar() {
         Intent intent = new Intent(this, MapsFragmentActivity.class);
         startActivity(intent);
     }
-
-    public void sendAsEmail(View view) {
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto","mariuspilgrim@icloud.com", null)); //This should be the ERCIS email address
-
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.contact_email_subject));
-
-        Intent intent = getIntent();
-        String messageFirstName = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_FIRST_NAME);
-        String messageLastName = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_LAST_NAME);
-        String messageEmail = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_EMAIL);
-        String messageMessage= intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_MESSAGE);
-
-        String completeEmailMessage = "<b>" + messageFirstName + "</b><br/><b>" + messageLastName + "</b><br/><b>" + messageEmail + "</b><br/>" + messageMessage;
-
-            emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(completeEmailMessage));
-        startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.email_chooser)));
-    }
-
-    public void backToSendMessage(View view) {
-        setContentView(R.layout.fragment_contact);
-        finish();
-    }
-
-    public void backToSendMessageActionBar(View view) {
-        setContentView(R.layout.fragment_contact);
-        finish();
-    }
-
-    /**
-     * Creating exception handling box
-     * @param method
-     * @param message
-     */
-    private void messageBox(String method, String message) {
-        AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
-        messageBox.setTitle(method);
-        messageBox.setMessage(message);
-        messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
-        messageBox.show();
-    }
-
-}
+    */

@@ -34,7 +34,7 @@
 
     <string name="contact_email_subject">Message from WWU App</string>
 
-    <string name="button_setDefaultText">Set default to Max Mustermann</string>
+    <string name="button_setDefaultText">Demo Button</string>
     <string name="button_send">Next</string>
     <string name="button_sendAsEmail">Send email</string>
     <string name="email_chooser">Send email ...</string>
@@ -81,6 +81,8 @@
     <string name="map_address_juridicum">Universitätsstraße 14, 48143 Münster</string>
     <string name="title_activity_map_location_details">Location Details</string>
     <string name="title_about">About</string>
+    <string name="title_activity_contact">Your Feedback</string>
+    <string name="title_activity_about_wwu">About WWU</string>
 
     <string name="map_location_details_view_title">Location:&#160;</string>
     <string name="map_location_details_view_address">Address:&#160;</string>
@@ -90,6 +92,20 @@
 
     <!-- Expandable List -->
     <string name="title_activity_expandable_list">WWU Locations</string>
+
+    <!-- About List -->
+    <string-array name="about_list_items_array">
+        <item>About this App</item>
+        <item>About the University of Münster</item>
+        <item>Feedback on the App</item>
+    </string-array>
+
+    <!-- About WWU -->
+    <string name="title_activity_about_app">About this App</string>
+    <string name="about_app_content">This app was developed by a pretty awesome guy!</string>
+
+    <!-- About WWU -->
+    <string name="about_wwu_content">The University of Münster (German: Westfälische Wilhelms-Universität Münster, WWU) is a public university located in the city of Münster, North Rhine-Westphalia in Germany. The WWU is part of the Deutsche Forschungsgemeinschaft, a society of Germany\'s leading research universities. The WWU has also been successful in the German government\'s Excellence Initiative. \n With almost 40,000 students and over 130 fields of study in 15 departments, it is Germany\'s third largest university and one of the foremost centers of German intellectual life. The university offers a wide range of subjects across the sciences, social sciences and the humanities. Several courses are also taught in English, including PhD programmes as well as postgraduate courses in geoinformatics, geospational technologies or information systems. \n Professors and former students have won nine Leibniz Prizes, the most prestigious as well as the best-funded prize in Europe, and one Fields Medal.</string>
 
     <!-- Expandable list group items -->
     <string-array name="group_list_items_array">
@@ -339,5 +355,4 @@
         <item>Wohnanlage Wilhelmskamp	Steinfurter Str. 67-81</item>
     </string-array>
 
-    <!-- git test Macbook-->
 </resources>
