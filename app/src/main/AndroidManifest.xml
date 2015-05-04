@@ -88,6 +88,16 @@ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
                 android:value="com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity" />
         </activity>
         <activity
+            android:name=".Library.LibrarySelectionList"
+            android:label="@string/title_library"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".Library.WebViewCatalogSearch"
+            android:label="@string/title_activity_web_view_catalog_search"
+            android:parentActivityName=".Library.LibrarySelectionList" >
+        </activity>
+        <activity
             android:name=".About.AboutSelectionList"
             android:label="@string/title_about"
             android:parentActivityName=".MainActivity" >

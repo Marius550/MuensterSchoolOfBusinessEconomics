@@ -80,6 +80,8 @@
     <string name="map_title_muenster_school_business_economics">Wirtschaftswissenschaftliche Fakultät WWU Münster</string>
     <string name="map_address_juridicum">Universitätsstraße 14, 48143 Münster</string>
     <string name="title_activity_map_location_details">Standort Details</string>
+    <string name="title_library">ULB Münster</string>
+    <string name="title_activity_web_view_catalog_search">Katalog Suche</string>
     <string name="title_about">About</string>
     <string name="title_activity_contact">Ihre Kritik</string>
     <string name="title_activity_about_wwu">About WWU</string>
@@ -92,6 +94,15 @@
 
     <!-- Expandable List -->
     <string name="title_activity_expandable_list">WWU Standorte</string>
+
+    <!-- Library List -->
+    <string-array name="library_list_items_array">
+        <item>Öffnungszeiten</item>
+        <item>Katalog Suche</item>
+        <item>Mein Account</item>
+        <item>Ask a Librarian</item>
+        <item>ULB Web Site</item>
+    </string-array>
 
     <!-- About List -->
     <string-array name="about_list_items_array">

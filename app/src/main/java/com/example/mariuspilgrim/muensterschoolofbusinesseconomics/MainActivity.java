@@ -28,6 +28,7 @@ import android.widget.Toast;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Library.LibrarySelectionList;
 
 public class MainActivity extends Activity {
 
@@ -201,6 +202,14 @@ public class MainActivity extends Activity {
     }
 
     /**
+     * Opens Library Selection List activity
+     */
+    public void goToLibraryActivity() {
+        Intent intent = new Intent(this, LibrarySelectionList.class);
+        startActivity(intent);
+    }
+
+    /**
      * Opens About Selection List activity
      */
     public void goToAboutActivity() {
@@ -238,7 +247,7 @@ public class MainActivity extends Activity {
                     selectItemWelcome(position);        //Dining
                     break;
                 case 7:
-                    selectItemContact(position);        //Library
+                    goToLibraryActivity();              //Library
                     break;
                 case 8:
                     selectItemWelcome(position);        //Settings

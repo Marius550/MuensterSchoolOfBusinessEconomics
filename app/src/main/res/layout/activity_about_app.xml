@@ -1,45 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <TableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1">
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:stretchColumns="*">
 
         <TableRow>
             <TextView
-                android:layout_column="1"
-                android:text="Open..."
+                android:text=""
                 android:padding="3dip" />
             <TextView
-                android:text="Ctrl-O"
-                android:gravity="right"
-                android:padding="3dip" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_column="1"
-                android:text="Save..."
+                android:text="Achieved"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:padding="3dip" />
             <TextView
-                android:text="Ctrl-S"
-                android:gravity="right"
-                android:padding="3dip" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_column="1"
-                android:text="Save As..."
-                android:padding="3dip" />
-            <TextView
-                android:text="Ctrl-Shift-S"
-                android:gravity="right"
+                android:text="To develop"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
 
@@ -49,23 +35,52 @@
 
         <TableRow>
             <TextView
-                android:text="X"
+                android:text="1"
+                android:textColor="@color/wwu_green"
                 android:padding="3dip" />
             <TextView
-                android:text="Import..."
+                android:text="Main Menu"
+                android:padding="3dip" />
+            <TextView
+                android:text="Completed: 70%"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Navigation drawer"
+                android:padding="3dip" />
+            <TextView
+                android:text="Add adjacent icons"
+                android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
 
         <TableRow>
             <TextView
-                android:text="X"
+                android:layout_column="1"
+                android:text=""
                 android:padding="3dip" />
             <TextView
-                android:text="Export..."
+                android:text="Add login (cp. UChicago)"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text=""
                 android:padding="3dip" />
             <TextView
-                android:text="Ctrl-E"
-                android:gravity="right"
+                android:text="Expand items by group \n (cp. ellucian apps)"
+                android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
 
@@ -75,9 +90,167 @@
 
         <TableRow>
             <TextView
-                android:layout_column="1"
-                android:text="Quit"
+                android:text="2"
+                android:textColor="@color/wwu_green"
+                android:padding="3dip" />
+            <TextView
+                android:text="About"
+                android:padding="3dip" />
+            <TextView
+                android:text="Completed: 100%"
+                android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="About App"
+                android:padding="3dip" />
+            <TextView
+                android:text="In progress..."
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="About WWU"
+                android:padding="3dip" />
+            <TextView
+                android:text="Write own text"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Feedback"
+                android:padding="3dip" />
+            <TextView
+                android:text=""
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:text="3"
+                android:textColor="@color/wwu_green"
+                android:padding="3dip" />
+            <TextView
+                android:text="Campus Map"
+                android:padding="3dip" />
+            <TextView
+                android:text="Completed: 70%"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Content"
+                android:padding="3dip" />
+            <TextView
+                android:text="Need to complete"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:text="4"
+                android:textColor="@color/wwu_green"
+                android:padding="3dip" />
+            <TextView
+                android:text="Services"
+                android:padding="3dip" />
+            <TextView
+                android:text="Completed: 100%"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Support of: \n English, German"
+                android:padding="3dip" />
+            <TextView
+                android:text="Add languages"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:text="5"
+                android:textColor="@color/wwu_green"
+                android:padding="3dip" />
+            <TextView
+                android:text="ToDo"
+                android:padding="3dip" />
+            <TextView
+                android:text="Completed: 0%"
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Icons in about"
+                android:padding="3dip" />
+            <TextView
+                android:text=""
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Library"
+                android:padding="3dip" />
+            <TextView
+                android:text=""
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
     </TableLayout>
 </ScrollView>
