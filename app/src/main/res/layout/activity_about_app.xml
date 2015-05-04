@@ -68,7 +68,7 @@
                 android:text=""
                 android:padding="3dip" />
             <TextView
-                android:text="Add login (cp. UChicago)"
+                android:text="Add ZIV login (cp. UChicago)"
                 android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
@@ -205,6 +205,17 @@
                 android:padding="3dip" />
         </TableRow>
 
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Add permail?"
+                android:padding="3dip" />
+            <TextView
+                android:text=""
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
         <View
             android:layout_height="2dip"
             android:background="#FF909090" />
@@ -233,7 +244,18 @@
                 android:text="Search Catalog"
                 android:padding="3dip" />
             <TextView
-                android:text="Works in app"
+                android:text=""
+                android:gravity="left"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Navigation"
+                android:padding="3dip" />
+            <TextView
+                android:text="Next, Back, Refresh button"
                 android:gravity="left"
                 android:padding="3dip" />
         </TableRow>
@@ -263,7 +285,7 @@
         <TableRow>
             <TextView
                 android:layout_column="1"
-                android:text="Icons in about"
+                android:text="Icons in lists"
                 android:padding="3dip" />
             <TextView
                 android:text=""

@@ -103,6 +103,10 @@ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
             android:parentActivityName=".Library.LibrarySelectionList" >
         </activity>
         <activity
+            android:name=".Library.WebViewLibrarySelectionUniversal"
+            android:parentActivityName=".Library.LibrarySelectionList" >
+        </activity>
+        <activity
             android:name=".About.AboutSelectionList"
             android:label="@string/title_about"
             android:parentActivityName=".MainActivity" >

@@ -1,4 +1,4 @@
-package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
+package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.Utilities;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
 /**
  * Created by mariuspilgrim on 12/03/15.

@@ -39,13 +39,15 @@ public class LibrarySelectionList extends ListActivity {
 
     switch (position) {
       case 0:
-        System.out.println("Hours");
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "http://www.ulb.uni-muenster.de/bibliothek/standorte/alphabet.html";
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "Opening Hours";
+          Intent intentHours = new Intent(this, WebViewLibrarySelectionUniversal.class);
+          startActivity(intentHours);
         break;
       case 1:
         if (isNetworkAvailable() && isOnline())
         {
-            Log.d("Network Connection", "Network available: " + isNetworkAvailable());
-            Log.d("Internet Connection", "Internet available: " + isOnline());
+            WebViewCatalogSearch.EXTRA_TARGET_URL = "http://katalogix.uni-muenster.de/Katalog/start.do";
             Intent intent = new Intent(this, WebViewCatalogSearch.class);
             startActivity(intent);
         } else {
@@ -55,14 +57,22 @@ public class LibrarySelectionList extends ListActivity {
         }
         break;
       case 2:
+          WebViewLibraryLogin.EXTRA_TARGET_URL = "https://katalogix.uni-muenster.de/Katalog/loginpage.do?methodToCall=showLogin";
           Intent intent = new Intent(this, WebViewLibraryLogin.class);
           startActivity(intent);
         break;
       case 3:
         System.out.println("Ask");
         break;
+      case 4:
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/";
+          Intent intentWebsite = new Intent(this, WebViewLibrarySelectionUniversal.class);
+          startActivity(intentWebsite);
+        break;
       default:
-        System.out.println("ULB Web Site");
+          WebViewCatalogSearch.EXTRA_TARGET_URL = "http://katalogix.uni-muenster.de/Katalog/start.do";
+          Intent intentCatalog = new Intent(this, WebViewCatalogSearch.class);
+          startActivity(intentCatalog);
         break;
     }
   }

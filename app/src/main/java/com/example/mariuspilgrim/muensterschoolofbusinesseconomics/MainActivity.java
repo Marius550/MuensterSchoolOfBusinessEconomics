@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.DepartmentFragment;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Library.LibrarySelectionList;
 
