@@ -4,9 +4,14 @@ package com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Library;
  * Created by mariuspilgrim on 19/03/15.
  */
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -37,19 +42,102 @@ public class LibrarySelectionList extends ListActivity {
         System.out.println("Hours");
         break;
       case 1:
-        Intent intent = new Intent(this, WebViewCatalogSearch.class);
-        startActivity(intent);
+        if (isNetworkAvailable() && isOnline())
+        {
+            Log.d("Network Connection", "Network available: " + isNetworkAvailable());
+            Log.d("Internet Connection", "Internet available: " + isOnline());
+            Intent intent = new Intent(this, WebViewCatalogSearch.class);
+            startActivity(intent);
+        } else {
+            Log.d("Connection", "There is no Internet or Network Connection");
+            Intent intent = new Intent(this, WebViewCatalogSearch.class);
+            startActivity(intent);
+        }
         break;
       case 2:
+          Intent intent = new Intent(this, WebViewLibraryLogin.class);
+          startActivity(intent);
+        break;
+      case 3:
         System.out.println("Ask");
         break;
-      case 4:
-        System.out.println("Web Site");
-        break;
       default:
-        System.out.println("Search");
+        System.out.println("ULB Web Site");
         break;
     }
   }
 
+  private boolean isNetworkAvailable() {
+    ConnectivityManager connectivityManager
+            = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+    return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+  }
+
+  public Boolean isOnline() {
+    try {
+      Process p1 = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.com");
+      int returnVal = p1.waitFor();
+      boolean reachable = (returnVal==0);
+      return reachable;
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    return false;
+  }
+
+  /**
+   * Creating exception handling box
+   * @param method
+   * @param message
+   */
+  public void messageBox(String method, String message) {
+    AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
+    messageBox.setTitle(method);
+    messageBox.setMessage(message);
+    messageBox.setCancelable(false);
+    messageBox.setNeutralButton("OK", null);
+    messageBox.show();
+  }
+
 }
+
+/*
+    public boolean hasActiveInternetConnection() {
+        if (isNetworkAvailable()) {
+            try {
+                HttpURLConnection urlc = (HttpURLConnection) (new URL("http://www.google.com").openConnection());
+                urlc.setRequestProperty("User-Agent", "Test");
+                urlc.setRequestProperty("Connection", "close");
+                urlc.setConnectTimeout(1500);
+                urlc.connect();
+                return (urlc.getResponseCode() == 200);
+            } catch (IOException e) {
+                Log.e("Internet Connection", "Error checking internet connection", e);
+            }
+        } else {
+            Log.d("Internet Connection", "No network available!");
+        }
+        return false;
+    }
+
+    public static boolean isOnline(Context mContext) {
+        ConnectivityManager conMgr = (ConnectivityManager) mContext
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] networkInfo = conMgr.getAllNetworkInfo();
+        boolean state = false;
+        for (NetworkInfo nInfo : networkInfo) {
+            if (nInfo.getType() == ConnectivityManager.TYPE_WIFI
+                    || nInfo.getType() == ConnectivityManager.TYPE_ETHERNET
+                    || nInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+                if (nInfo.getState() == NetworkInfo.State.CONNECTED
+                        || nInfo.getState() == NetworkInfo.State.CONNECTING) {
+                    state = true;
+                    break;
+                }
+            }
+        }
+        return state;
+    }
+ */
