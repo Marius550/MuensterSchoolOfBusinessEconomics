@@ -51,10 +51,51 @@ public class WebViewCatalogSearch extends Activity {
                 String webUrl = mWebView.getUrl();
                 WebViewCatalogSearch.this.mWebView.loadUrl(webUrl);
                 return true;
+            case R.id.action_back:
+                onBackPressed();
+                return true;
+            case R.id.action_forward:
+                onForwardPressed();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mWebView.canGoBack()) {
+            mWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    public void onForwardPressed() {
+        if (mWebView.canGoForward()) {
+            mWebView.goForward();
+        }
+    }
+
 }
+
+/*
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(event.getAction() == KeyEvent.ACTION_DOWN){
+            switch(keyCode)
+            {
+                case KeyEvent.KEYCODE_BACK:
+                    if(mWebView.canGoBack()){
+                        mWebView.goBack();
+                    }else{
+                        finish();
+                    }
+                    return true;
+            }
+
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+ */
 

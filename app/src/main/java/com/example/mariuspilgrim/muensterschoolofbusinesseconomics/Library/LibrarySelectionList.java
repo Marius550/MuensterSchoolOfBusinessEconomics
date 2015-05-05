@@ -62,7 +62,9 @@ public class LibrarySelectionList extends ListActivity {
           startActivity(intent);
         break;
       case 3:
-        System.out.println("Ask");
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/";
+          Intent intentContact = new Intent(this, WebViewLibrarySelectionUniversal.class);
+          startActivity(intentContact);
         break;
       case 4:
           WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/";
