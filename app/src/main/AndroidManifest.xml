@@ -131,6 +131,11 @@ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
             android:label="@string/title_activity_about_app"
             android:parentActivityName=".About.AboutSelectionList" >
         </activity>
+        <activity
+            android:name=".WebViewMainMenuSearch"
+            android:label="@string/title_activity_main_menu_search"
+            android:parentActivityName=".MainActivity" >
+        </activity>
     </application>
 
 </manifest>

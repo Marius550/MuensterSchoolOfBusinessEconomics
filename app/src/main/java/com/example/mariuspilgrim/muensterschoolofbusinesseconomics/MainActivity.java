@@ -2,6 +2,7 @@
 package com.example.mariuspilgrim.muensterschoolofbusinesseconomics;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.SearchManager;
@@ -23,7 +24,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
@@ -123,6 +123,13 @@ public class MainActivity extends Activity {
             String query = intent.getStringExtra(SearchManager.QUERY) + getResources().getString(R.string.search_added_string_uni_muenster);
             //use the query to search your data somehow
 
+            String googleSearchURL = "https://www.google.de/#q=" + query;
+            WebViewMainMenuSearch.EXTRA_SEARCH_QUERY_INPUT = query;
+            WebViewMainMenuSearch.EXTRA_TARGET_URL = googleSearchURL;
+            Intent intentMenuSearch = new Intent(this, WebViewMainMenuSearch.class);
+            startActivity(intentMenuSearch);
+
+            /*
             Intent intentWebSearch = new Intent(Intent.ACTION_WEB_SEARCH);
             intentWebSearch.putExtra(SearchManager.QUERY, query);
             if (intentWebSearch.resolveActivity(getPackageManager()) != null) {
@@ -130,7 +137,22 @@ public class MainActivity extends Activity {
             } else {
                 Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
             }
+            */
         }
+    }
+
+    /**
+     * Creating exception handling box
+     * @param method
+     * @param message
+     */
+    public void messageBox(String method, String message) {
+        AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
+        messageBox.setTitle(method);
+        messageBox.setMessage(message);
+        messageBox.setCancelable(false);
+        messageBox.setNeutralButton("OK", null);
+        messageBox.show();
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
@@ -151,15 +173,8 @@ public class MainActivity extends Activity {
         }
         // Handle action buttons
         switch(item.getItemId()) {
-
         case R.id.action_settings:
              openAndroidSettings();
-                return true;
-        case R.id.action_browser:
-             openAndroidBrowser();
-                return true;
-        case R.id.action_map:
-            goToGoogleMapsFragmentActivity();
                 return true;
         default:
             return super.onOptionsItemSelected(item);

@@ -12,6 +12,8 @@
         <item>Library (X)</item>
         <item>Settings</item>
         <item>About (X)</item>
+        <item>Admissions</item>
+        <item>Public Transport</item>
     </string-array>
 
     <!-- Action Bar -->
@@ -52,7 +54,7 @@
     <string name="drawer_close">Close navigation drawer</string>
     <string name="action_websearch">Web search</string>
     <string name="browser_not_available">Sorry, there\'s no web browser available</string>
-    <string name="action_settings">Change language</string>
+    <string name="action_settings">Change Language</string>
     <string name="action_help">Help</string>
     <string name="action_browser">WWU Homepage</string>
     <string name="action_map">Juridicum map</string>
@@ -76,8 +78,8 @@
     <string name="google_maps_key">AIzaSyARPszAJzvs5dxxFrEfMsPu1Zb0vVD45KE</string>
     <string name="campus_show_map">Show on map</string>
     <string name="campus_address">Universitätsstraße 14, 48143 Münster</string>
-    <string name="map_help_title">Help WWU Map</string>
-    <string name="map_list_help_title">Help WWU Building List</string>
+    <string name="map_help_title">WWU Map</string>
+    <string name="map_list_help_title">WWU Building List</string>
     <string name="map_help_text">Use the list icon in the action bar to search WWU buildings by their alphabetical order.</string>
     <string name="map_list_help_text">Select between the available list items to navigate to a WWU destination of your interest. </string>
     <string name="map_title_muenster_school_business_economics">Münster School of Business and Economics</string>
@@ -89,6 +91,7 @@
     <string name="title_about">About</string>
     <string name="title_activity_contact">Your Feedback</string>
     <string name="title_activity_about_wwu">About WWU</string>
+    <string name="title_activity_main_menu_search">Main Menu Search</string>
 
     <string name="map_location_details_view_title">Location:&#160;</string>
     <string name="map_location_details_view_address">Address:&#160;</string>

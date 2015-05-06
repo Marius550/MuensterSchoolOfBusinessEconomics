@@ -88,6 +88,7 @@
     <string name="title_about">About</string>
     <string name="title_activity_contact">Ihre Kritik</string>
     <string name="title_activity_about_wwu">About WWU</string>
+    <string name="title_activity_main_menu_search">Hauptmenü Suche</string>
 
     <string name="map_location_details_view_title">Standort:&#160;</string>
     <string name="map_location_details_view_address">Adresse:&#160;</string>
