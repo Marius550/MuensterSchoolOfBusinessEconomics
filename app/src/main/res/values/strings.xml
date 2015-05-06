@@ -2,16 +2,16 @@
 <resources>
     <string name="app_name">WWU Mobile</string>
     <string-array name="menu_items_array">
-        <item>Welcome</item>
+        <item>Welcome (X)</item>
         <item>Student Administration</item>
         <item>News</item>
         <item>Calendar</item>
         <item>Directory</item>
-        <item>Campus Map</item>
+        <item>Campus Map (X)</item>
         <item>Dining</item>
-        <item>Library</item>
+        <item>Library (X)</item>
         <item>Settings</item>
-        <item>About</item>
+        <item>About (X)</item>
     </string-array>
 
     <!-- Action Bar -->
@@ -32,7 +32,7 @@
     <string name="result_email">Email address:&#160;</string>
     <string name="result_message">Entered message:&#160;</string>
 
-    <string name="contact_email_subject">Message from WWU App</string>
+    <string name="contact_email_subject">WWU Mobile Feedback (Android)</string>
 
     <string name="button_setDefaultText">Demo Button</string>
     <string name="button_send">Next</string>
@@ -85,7 +85,7 @@
     <string name="title_activity_map_location_details">Location Details</string>
     <string name="title_library">ULB Münster</string>
     <string name="title_activity_web_view_catalog_search">Catalog Search</string>
-    <string name="title_activity_web_view_library_login">ULB Login</string>
+    <string name="title_activity_web_view_library_login">My Account</string>
     <string name="title_about">About</string>
     <string name="title_activity_contact">Your Feedback</string>
     <string name="title_activity_about_wwu">About WWU</string>

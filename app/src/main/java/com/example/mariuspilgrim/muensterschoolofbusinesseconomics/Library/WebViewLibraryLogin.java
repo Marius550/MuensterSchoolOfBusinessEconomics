@@ -78,4 +78,3 @@ public class WebViewLibraryLogin extends Activity {
     }
 
 }
-

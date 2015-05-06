@@ -32,7 +32,7 @@
     <string name="result_email">Email Adresse:&#160;</string>
     <string name="result_message">Eingegebene Nachricht:&#160;</string>
 
-    <string name="contact_email_subject">Nachricht von der WWU App</string>
+    <string name="contact_email_subject">WWU Mobile Feedback (Android)</string>
 
     <string name="button_setDefaultText">Demo Button</string>
     <string name="button_send">Weiter</string>

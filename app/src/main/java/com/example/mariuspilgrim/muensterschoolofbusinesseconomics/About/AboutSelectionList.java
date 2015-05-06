@@ -8,24 +8,20 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Contact.ContactActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class AboutSelectionList extends ListActivity {
-  public void onCreate(Bundle icicle) {
-    super.onCreate(icicle);
 
-    List<String> about_list_items_array = Arrays.asList(getResources().getStringArray(R.array.about_list_items_array));
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, about_list_items_array);
-    setListAdapter(adapter);
+    final String[] about_list_items_array = getResources().getStringArray(R.array.about_list_items_array);
+    setListAdapter(new AboutMobileArrayAdapter(this, about_list_items_array));
   }
 
   @Override
@@ -46,3 +42,14 @@ public class AboutSelectionList extends ListActivity {
   }
 
 }
+
+  /*
+  public void onCreate(Bundle icicle) {
+    super.onCreate(savedInstanceState);
+
+    List<String> about_list_items_array = Arrays.asList(getResources().getStringArray(R.array.about_list_items_array));
+
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, about_list_items_array);
+    setListAdapter(adapter);
+  }
+  */

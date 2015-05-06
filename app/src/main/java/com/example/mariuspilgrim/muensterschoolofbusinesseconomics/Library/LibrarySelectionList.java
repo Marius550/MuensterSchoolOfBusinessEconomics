@@ -13,24 +13,20 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.R;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class LibrarySelectionList extends ListActivity {
-  public void onCreate(Bundle icicle) {
-    super.onCreate(icicle);
 
-    List<String> about_list_items_array = Arrays.asList(getResources().getStringArray(R.array.library_list_items_array));
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, about_list_items_array);
-    setListAdapter(adapter);
-  }
+        final String[] library_list_items_array = getResources().getStringArray(R.array.library_list_items_array);
+        setListAdapter(new LibraryMobileArrayAdapter(this, library_list_items_array));
+    }
 
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -63,11 +59,13 @@ public class LibrarySelectionList extends ListActivity {
         break;
       case 3:
           WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/";
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "Ask a Librarian";
           Intent intentContact = new Intent(this, WebViewLibrarySelectionUniversal.class);
           startActivity(intentContact);
         break;
       case 4:
           WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/";
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "ULB Web Site";
           Intent intentWebsite = new Intent(this, WebViewLibrarySelectionUniversal.class);
           startActivity(intentWebsite);
         break;
