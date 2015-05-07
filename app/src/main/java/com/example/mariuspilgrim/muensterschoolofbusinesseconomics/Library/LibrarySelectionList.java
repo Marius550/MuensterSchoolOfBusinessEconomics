@@ -54,8 +54,8 @@ public class LibrarySelectionList extends ListActivity {
         break;
       case 2:
           WebViewLibraryLogin.EXTRA_TARGET_URL = "https://katalogix.uni-muenster.de/Katalog/loginpage.do?methodToCall=showLogin";
-          Intent intent = new Intent(this, WebViewLibraryLogin.class);
-          startActivity(intent);
+          Intent intentCatalog = new Intent(this, WebViewLibraryLogin.class);
+          startActivity(intentCatalog);
         break;
       case 3:
           WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/";
@@ -71,8 +71,8 @@ public class LibrarySelectionList extends ListActivity {
         break;
       default:
           WebViewCatalogSearch.EXTRA_TARGET_URL = "http://katalogix.uni-muenster.de/Katalog/start.do";
-          Intent intentCatalog = new Intent(this, WebViewCatalogSearch.class);
-          startActivity(intentCatalog);
+          Intent intentCatalogDefault = new Intent(this, WebViewCatalogSearch.class);
+          startActivity(intentCatalogDefault);
         break;
     }
   }

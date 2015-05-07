@@ -136,6 +136,25 @@ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
             android:label="@string/title_activity_main_menu_search"
             android:parentActivityName=".MainActivity" >
         </activity>
+        <activity
+            android:name=".Athletics.WebViewAthleticsSelectionUniversal"
+            android:parentActivityName=".Athletics.AthleticsSelectionList" >
+        </activity>
+        <activity
+            android:name=".Athletics.AthleticsSelectionList"
+            android:label="@string/title_athletics"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".Athletics.AthleticsContactActivity"
+            android:label="@string/title_athletics_activity_contact"
+            android:parentActivityName=".Athletics.AthleticsSelectionList" >
+        </activity>
+        <activity
+            android:name=".Athletics.AthleticsContactResultActivity"
+            android:label="@string/title_athletics_activity_contact_result"
+            android:parentActivityName=".Athletics.AthleticsContactActivity" >
+        </activity>
     </application>
 
 </manifest>

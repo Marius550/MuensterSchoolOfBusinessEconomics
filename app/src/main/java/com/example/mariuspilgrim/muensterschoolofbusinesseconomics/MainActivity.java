@@ -28,6 +28,7 @@ import android.widget.SearchView;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.DepartmentFragment;
+import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Athletics.AthleticsSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Library.LibrarySelectionList;
 
@@ -218,6 +219,69 @@ public class MainActivity extends Activity {
     }
 
     /**
+     * The click listener for ListView in the navigation drawer
+     */
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            switch(position) {
+                case 0:
+                    selectItemWelcome(position);        //Welcome
+                    break;
+                case 1:
+                    goToGoogleMapsFragmentActivity();   //Campus Map
+                    break;
+                case 2:
+                    goToLibraryActivity();              //Library
+                    break;
+                case 3:
+                    goToAboutActivity();                //About
+                    break;
+                case 4:
+                    goToAthleticsActivity();            //Athletics
+                    break;
+                case 5:
+                    selectItemWelcome(position);        //Student Administration
+                    break;
+                case 6:
+                    selectItemWelcome(position);        //News
+                    break;
+                case 7:
+                    selectItemWelcome(position);        //Calendar
+                    break;
+                case 8:
+                    selectItemWelcome(position);        //Directory
+                    break;
+                case 9:
+                    selectItemWelcome(position);        //Dining
+                    break;
+                case 10:
+                    selectItemWelcome(position);        //Settings
+                    break;
+                case 11:
+                    selectItemWelcome(position);        //Admissions
+                    break;
+                case 12:
+                    selectItemWelcome(position);        //Public Transport
+                    break;
+                case 13:
+                    selectItemWelcome(position);        //Social
+                    break;
+                case 14:
+                    selectItemWelcome(position);        //Emergency Info
+                    break;
+                case 15:
+                    selectItemWelcome(position);        //Campus Tour
+                    break;
+                default:
+                    selectItemWelcome(position);
+                    break;
+            }
+        }
+    }
+
+    /**
      * Opens Library Selection List activity
      */
     public void goToLibraryActivity() {
@@ -234,48 +298,11 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * The click listener for ListView in the navigation drawer
+     * Opens Athletics Selection List activity
      */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            switch(position) {
-                case 0:
-                    selectItemWelcome(position);        //Welcome
-                    break;
-                case 1:
-                    selectItemDepartment(position);     //Student Administration
-                    break;
-                case 2:
-                    selectItemNews(position);           //News
-                    break;
-                case 3:
-                    selectItemNews(position);           //Calendar
-                    break;
-                case 4:
-                    selectItemNews(position);           //Directory
-                    break;
-                case 5:
-                    goToGoogleMapsFragmentActivity();   //WWU Map
-                    break;
-                case 6:
-                    selectItemWelcome(position);        //Dining
-                    break;
-                case 7:
-                    goToLibraryActivity();              //Library
-                    break;
-                case 8:
-                    selectItemWelcome(position);        //Settings
-                    break;
-                case 9:
-                    goToAboutActivity();                //About
-                    break;
-                default:
-                    selectItemWelcome(position);
-                    break;
-            }
-        }
+    public void goToAthleticsActivity() {
+        Intent intent = new Intent(this, AthleticsSelectionList.class);
+        startActivity(intent);
     }
 
     private void selectItemWelcome(int position) {

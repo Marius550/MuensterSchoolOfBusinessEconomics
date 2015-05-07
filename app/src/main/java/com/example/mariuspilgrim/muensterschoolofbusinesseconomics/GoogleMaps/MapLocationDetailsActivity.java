@@ -51,7 +51,7 @@ public class MapLocationDetailsActivity extends Activity {
 
             //throw new RuntimeException(); //triggers Exception
         } catch (Exception ex) {
-            messageBox(getResources().getString(R.string.error_oncreate_MapLocationDetailsActivity), ex.getMessage());
+            messageBox(getResources().getString(R.string.error_oncreate_map_location_details_activity), ex.getMessage());
             ex.printStackTrace();
         }
 

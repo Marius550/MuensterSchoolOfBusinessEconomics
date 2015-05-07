@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_contact_results"
+    android:id="@+id/athletics_contact_results"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -24,6 +24,15 @@
         android:textColor="@color/wwu_grey"/>
     <TextView
         android:id="@+id/result_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/wwu_grey"/>
+    <TextView
+        android:id="@+id/result_message_subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"

@@ -30,7 +30,9 @@
     <string name="result_first_name">Vorname:&#160;</string>
     <string name="result_last_name">Nachname:&#160;</string>
     <string name="result_email">Email Adresse:&#160;</string>
+    <string name="result_subject">Betreff:&#160;</string>
     <string name="result_message">Eingegebene Nachricht:&#160;</string>
+    <string name="edit_message_subject"><b>Betreff</b></string>
 
     <string name="contact_email_subject">WWU Mobile Feedback (Android)</string>
 
@@ -46,6 +48,7 @@
     <string name="default_first_name">Max</string>
     <string name="default_last_name">Mustermann</string>
     <string name="default_email">max.mustermann@gmail.de</string>
+    <string name="default_subject">Karate</string>
     <string name="default_message">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
 
     <string name="drawer_open">Öffne navigation drawer</string>
@@ -89,22 +92,34 @@
     <string name="title_activity_contact">Ihre Kritik</string>
     <string name="title_activity_about_wwu">About WWU</string>
     <string name="title_activity_main_menu_search">Hauptmenü Suche</string>
+    <string name="title_athletics">Hochschulsport</string>
+    <string name="title_athletics_activity_contact">Nachricht Eingabe</string>
+    <string name="title_athletics_activity_contact_result">Ihre Nachricht</string>
 
     <string name="map_location_details_view_title">Standort:&#160;</string>
     <string name="map_location_details_view_address">Adresse:&#160;</string>
     <string name="map_location_details_view_description">Mehr Informationen:&#160;</string>
 
-    <string name="error_oncreate_MapLocationDetailsActivity">onCreate Error</string>
+    <string name="error_oncreate_map_location_details_activity">onCreate Error</string>
 
     <!-- Expandable List -->
     <string name="title_activity_expandable_list">WWU Standorte</string>
+
+    <!-- Athletics List -->
+    <string-array name="athletics_list_items_array">
+        <item>Angebote A-Z</item>
+        <item>Hochschulsport Web Site</item>
+        <item>Kontakt</item>
+    </string-array>
+
+    <string name="athletics_contact_welcome_info">Um den WWU Hochschulsport zu kontaktieren verwenden Sie bitte das folgende Formular:</string>
 
     <!-- Library List -->
     <string-array name="library_list_items_array">
         <item>Öffnungszeiten</item>
         <item>Katalog Suche</item>
         <item>Mein Account</item>
-        <item>Ask a Librarian</item>
+        <item>Kontakt</item>
         <item>ULB Web Site</item>
     </string-array>
 
