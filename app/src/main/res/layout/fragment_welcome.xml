@@ -28,7 +28,7 @@
         android:layout_marginTop="350dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/swipe_2"
+        android:src="@drawable/swipe"
         android:paddingLeft="30dp"
         android:paddingBottom="10dp"
         android:adjustViewBounds="true" />

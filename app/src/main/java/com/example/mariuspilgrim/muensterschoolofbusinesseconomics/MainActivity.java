@@ -26,8 +26,6 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.About.AboutSelectionList;
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.ContactFragment;
-import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Archive.DepartmentFragment;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Athletics.AthleticsSelectionList;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.GoogleMaps.MapsFragmentActivity;
 import com.example.mariuspilgrim.muensterschoolofbusinesseconomics.Library.LibrarySelectionList;
@@ -318,45 +316,6 @@ public class MainActivity extends Activity {
         setMenuDrawer(position);
     }
 
-    private void selectItemDepartment(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new DepartmentFragment();
-        Bundle args = new Bundle();
-        args.putInt(DepartmentFragment.ARG_DEPARTMENT_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemNews(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new AffairsFragment();
-        Bundle args = new Bundle();
-        args.putInt(AffairsFragment.ARG_AFFAIRS_NUMBER, position);
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
-    private void selectItemContact(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = new ContactFragment(); //Does not use bottom fragment class but own ContactFragment
-        Bundle args = new Bundle();
-        args.putInt(ContactFragment.ARG_CONTACT_NUMBER, position); //Also adjust to ContactFragment
-        fragment.setArguments(args);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-        setMenuDrawer(position);
-    }
-
     /**
      * Closes the navigation list after having selected the menu item
      */
@@ -406,27 +365,6 @@ public class MainActivity extends Activity {
 
             //Get menu id / Name to finally set the title it is connected to
             int i = getArguments().getInt(ARG_WELCOME_NUMBER);
-            String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-            getActivity().setTitle(menuItem);
-
-            return rootView;
-        }
-    }
-
-    /**
-     * Fragment that appears in the "content_frame", shows an affairs fragment
-     */
-    public static class AffairsFragment extends Fragment {
-        public static final String ARG_AFFAIRS_NUMBER = "AFFAIRS_number";
-
-        public AffairsFragment() {
-            // Empty constructor required for fragment subclasses
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_affairs, container, false);
-            int i = getArguments().getInt(ARG_AFFAIRS_NUMBER);
             String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
             getActivity().setTitle(menuItem);
 

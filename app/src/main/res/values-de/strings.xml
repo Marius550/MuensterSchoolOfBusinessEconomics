@@ -2,20 +2,26 @@
 <resources>
     <string name="app_name">WWU Mobile</string>
     <string-array name="menu_items_array">
-        <item>Willkommen</item>
-        <item>Studenten Verwaltung</item>
+        <item>Willkommen (X)</item>
+        <item>Campus Karte (X)</item>
+        <item>Bibliothek (X)</item>
+        <item>About (X)</item>
+        <item>Hochschulsport (X)</item>
+        <item>Studium Administration</item>
         <item>News</item>
-        <item>Kalendar</item>
+        <item>Events</item>
         <item>Verzeichnis</item>
-        <item>Campus Karte</item>
         <item>Mensa</item>
-        <item>Bibliothek</item>
         <item>Einstellungen</item>
-        <item>About</item>
+        <item>Zulassungsverfahren</item>
+        <item>Nahverkehr</item>
+        <item>Sociale Medien</item>
+        <item>Notfall Info</item>
+        <item>Campus Tour</item>
     </string-array>
 
     <!-- Action Bar -->
-    <string name="search_hint_action_bar">Suche in Uni Münster</string>
+    <string name="search_hint_action_bar">Suche Uni Münster</string>
     <string name="search_added_string_uni_muenster">&#160;Uni Münster</string>
     <string name="search_added_string_ulb_muenster">&#160;ULB Münster</string>
 
@@ -26,15 +32,14 @@
     <string name="edit_email_incorrect">Falsche Email Adresse, versuchen Sie es erneut</string>
     <string name="edit_email_incorrect_title">Ungültige Email Eingabe</string>
     <string name="edit_message"><b>Geben Sie ihre Nachricht ein</b></string>
+    <string name="edit_message_subject"><b>Betreff</b></string>
+    <string name="contact_email_subject">WWU Mobile Feedback (Android)</string>
 
     <string name="result_first_name">Vorname:&#160;</string>
     <string name="result_last_name">Nachname:&#160;</string>
     <string name="result_email">Email Adresse:&#160;</string>
     <string name="result_subject">Betreff:&#160;</string>
     <string name="result_message">Eingegebene Nachricht:&#160;</string>
-    <string name="edit_message_subject"><b>Betreff</b></string>
-
-    <string name="contact_email_subject">WWU Mobile Feedback (Android)</string>
 
     <string name="button_setDefaultText">Demo Button</string>
     <string name="button_send">Weiter</string>
@@ -63,13 +68,7 @@
     <string name="action_back">Zurück</string>
     <string name="action_forward">Weiter</string>
     <string name="action_wwu_locations_list">WWU Standorte Karte</string>
-    <string name="fragment_test">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
     <string name="welcome_fragment"><b>Willkommmen an der wirtschaftswissenschaftlichen Fakultät der WWU Münster</b>\n \n Zur weiteren Navigation verwenden Sie bitte das slide menu auf der linken Seite.</string>
-
-    <string name="department_fragment">The Department of Information Systems was founded in 1990 as part of the Münster School of Business and Economics (MSBE). More than 175 persons work at the department; there are seven professors, about 75 staff members and about 100 student assistants. Modern hardware and software facilities are available. The department is responsible for the Wirtschaftsinformatik bachelor program and the Information Systems master program in english language. Every year up to 100 students finish their studies to work in different sectors as consultants, software project managers, information managers, information system and organization designers etc. In application oriented research and development projects we connect business concepts with modern information and communication techniques to obtain holistic solutions. In cooperation with companies and associations we implement research results. The department provides consulting in designing of operational IT application and process organization.</string>
-    <string name="department_fragment_prof_list">The department is represented by the following professors:</string>
-
-    <string name="affairs_fragment">Affairs \n Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
 
     <string name="error_oncreate_ContactResultFragmentActivity">onCreate Error</string>
     <string name="browser_default_address">https://www.wiwi.uni-muenster.de/fakultaet/de</string>
@@ -79,8 +78,8 @@
     <string name="google_maps_key">AIzaSyARPszAJzvs5dxxFrEfMsPu1Zb0vVD45KE</string>
     <string name="campus_show_map">Auf Karte zeigen</string>
     <string name="campus_address">Universitätsstraße 14, 48143 Münster</string>
-    <string name="map_help_title">Hilfe WWU Karte</string>
-    <string name="map_list_help_title">Hilfe WWU Standortlist</string>
+    <string name="map_help_title">WWU Karte</string>
+    <string name="map_list_help_title">WWU Standortlist</string>
     <string name="map_help_text">Use the list icon in the action bar to search WWU buildings by their alphabetical order.</string>
     <string name="map_list_help_text">Select between the available list items to navigate to a WWU destination of your interest. </string>
     <string name="map_title_muenster_school_business_economics">Wirtschaftswissenschaftliche Fakultät WWU Münster</string>
@@ -88,6 +87,7 @@
     <string name="title_activity_map_location_details">Standort Details</string>
     <string name="title_library">ULB Münster</string>
     <string name="title_activity_web_view_catalog_search">Katalog Suche</string>
+    <string name="title_activity_web_view_library_login">Mein Account</string>
     <string name="title_about">About</string>
     <string name="title_activity_contact">Ihre Kritik</string>
     <string name="title_activity_about_wwu">About WWU</string>
