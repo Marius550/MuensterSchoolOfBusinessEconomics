@@ -30,18 +30,18 @@ public class AthleticsSelectionList extends ListActivity {
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
     String item = (String) getListAdapter().getItem(position);
-    Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+    Toast.makeText(this, item + getResources().getString(R.string.list_item_selected), Toast.LENGTH_LONG).show();
 
     switch (position) {
       case 0:
-          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = "http://muenster.hochschulsport-nrw.de/angebote/aktueller_zeitraum/m.html";
-          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = "Sports Offer A-Z";
+          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.athletics_course_offer);
+          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.athletics_item_1);
           Intent intentSportsOffer = new Intent(this, WebViewAthleticsSelectionUniversal.class);
           startActivity(intentSportsOffer);
         break;
       case 1:
-          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = "https://www.uni-muenster.de/Hochschulsport/en/";
-          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = "Athletics Web Site";
+          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.athletics_web_site);
+          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.athletics_item_2);
           Intent intentWebSite = new Intent(this, WebViewAthleticsSelectionUniversal.class);
           startActivity(intentWebSite);
         break;
@@ -50,8 +50,8 @@ public class AthleticsSelectionList extends ListActivity {
           startActivity(intentContact);
         break;
       default:
-          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = "http://muenster.hochschulsport-nrw.de/angebote/aktueller_zeitraum/m_az.html";
-          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = "Sports Offer A-Z";
+          WebViewAthleticsSelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.athletics_course_offer);
+          WebViewAthleticsSelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.athletics_item_1);
           Intent intentSportsOfferDefault = new Intent(this, WebViewAthleticsSelectionUniversal.class);
           startActivity(intentSportsOfferDefault);
           break;
@@ -67,7 +67,7 @@ public class AthleticsSelectionList extends ListActivity {
 
   public Boolean isOnline() {
     try {
-      Process p1 = Runtime.getRuntime().exec("ping -c 1 www.google.com");
+      Process p1 = Runtime.getRuntime().exec(getResources().getString(R.string.test_is_online_url));
       int returnVal = p1.waitFor();
       boolean reachable = (returnVal==0);
       return reachable;
@@ -88,7 +88,7 @@ public class AthleticsSelectionList extends ListActivity {
     messageBox.setTitle(method);
     messageBox.setMessage(message);
     messageBox.setCancelable(false);
-    messageBox.setNeutralButton("OK", null);
+    messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
     messageBox.show();
   }
 

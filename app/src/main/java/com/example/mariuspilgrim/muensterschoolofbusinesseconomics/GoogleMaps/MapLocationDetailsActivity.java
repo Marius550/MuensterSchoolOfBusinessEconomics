@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -49,7 +47,7 @@ public class MapLocationDetailsActivity extends Activity {
             String textViewDescriptionHtml = "<b>" + getResources().getString(R.string.map_location_details_view_description) + "</b>" + EXTRA_DESCRIPTION;
             textViewDescription.append(Html.fromHtml(textViewDescriptionHtml));
 
-            //throw new RuntimeException(); //triggers Exception
+            //throw new RuntimeException();
         } catch (Exception ex) {
             messageBox(getResources().getString(R.string.error_oncreate_map_location_details_activity), ex.getMessage());
             ex.printStackTrace();
@@ -109,7 +107,7 @@ public class MapLocationDetailsActivity extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

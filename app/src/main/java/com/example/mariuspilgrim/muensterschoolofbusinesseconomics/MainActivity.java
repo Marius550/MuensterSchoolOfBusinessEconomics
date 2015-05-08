@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
             String query = intent.getStringExtra(SearchManager.QUERY) + getResources().getString(R.string.search_added_string_uni_muenster);
             //use the query to search your data somehow
 
-            String googleSearchURL = "https://www.google.de/#q=" + query;
+            String googleSearchURL = getResources().getString(R.string.main_menu_search_google_url_q) + query;
             WebViewMainMenuSearch.EXTRA_SEARCH_QUERY_INPUT = query;
             WebViewMainMenuSearch.EXTRA_TARGET_URL = googleSearchURL;
             Intent intentMenuSearch = new Intent(this, WebViewMainMenuSearch.class);
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 
@@ -188,7 +188,8 @@ public class MainActivity extends Activity {
         //startActivityForResult(new Intent(Settings.ACTION_SETTINGS), 0);
 
         Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
+        intent.setClassName(getResources().getString(R.string.android_settings_path),
+                            getResources().getString(R.string.android_settings_language_path));
         startActivity(intent);
     }
 

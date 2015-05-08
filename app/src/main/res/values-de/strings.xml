@@ -20,7 +20,29 @@
         <item>Campus Tour</item>
     </string-array>
 
-    <!-- Action Bar -->
+    <!-- Controls -->
+    <string name="list_item_selected">&#160;Ausgewählt</string>
+    <string name="target_contact_email_address_athletics">mariuspilgrim@icloud.com</string>
+    <string name="target_contact_email_address_app_maintenance">mariuspilgrim@icloud.com</string>
+    <string name="ok">OK</string>
+    <string name="test_is_online_url">ping -c 1 www.google.com</string>
+    <string name="expandable_list_group_position_expanded">&#160;Ausgeklappt</string>
+    <string name="expandable_list_group_position_collapsed">&#160;Eingeklappt</string>
+    <string name="main_menu_search_google_url_q">https://www.google.de/#q=</string>
+    <string name="android_settings_path">com.android.settings</string>
+    <string name="android_settings_language_path">com.android.settings.LanguageSettings</string>
+
+    <!-- Links -->
+    <string name="athletics_course_offer">http://muenster.hochschulsport-nrw.de/angebote/aktueller_zeitraum/m.html</string>
+    <string name="athletics_web_site">https://www.uni-muenster.de/Hochschulsport/</string>
+
+    <string name="library_opening_hours_url">http://www.ulb.uni-muenster.de/bibliothek/standorte/alphabet.html</string>
+    <string name="library_catalog_url">http://katalogix.uni-muenster.de/Katalog/start.do</string>
+    <string name="library_web_site_url">https://www.ulb.uni-muenster.de/</string>
+    <string name="library_contact_url">https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/</string>
+    <string name="library_login_url">https://katalogix.uni-muenster.de/Katalog/loginpage.do?methodToCall=showLogin</string>
+
+    <!-- Contact -->
     <string name="search_hint_action_bar">Suche Uni Münster</string>
     <string name="search_added_string_uni_muenster">&#160;Uni Münster</string>
     <string name="search_added_string_ulb_muenster">&#160;ULB Münster</string>
@@ -59,10 +81,10 @@
     <string name="drawer_open">Öffne navigation drawer</string>
     <string name="drawer_close">Schliesse navigation drawer</string>
     <string name="action_websearch">Web Suche</string>
-    <string name="browser_not_available">Entschuldigung, es ist kein Internet browser verfügbar</string>
+    <string name="browser_not_available">Entschuldigung, es ist kein Internet Browser verfügbar</string>
     <string name="action_settings">Sprache ändern</string>
     <string name="action_help">Hilfe</string>
-    <string name="action_browser">WWU Homepage</string>
+    <string name="action_browser">WWU Web Site</string>
     <string name="action_map">Juridicum Karte</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_back">Zurück</string>
@@ -80,7 +102,7 @@
     <string name="campus_address">Universitätsstraße 14, 48143 Münster</string>
     <string name="map_help_title">WWU Karte</string>
     <string name="map_list_help_title">WWU Standortlist</string>
-    <string name="map_help_text">Use the list icon in the action bar to search WWU buildings by their alphabetical order.</string>
+    <string name="map_help_text">Verwenden Sie das Listen icon in der action bar um nach WWU Gebäuden in alphabetischer Ordnung zu suchen.</string>
     <string name="map_list_help_text">Select between the available list items to navigate to a WWU destination of your interest. </string>
     <string name="map_title_muenster_school_business_economics">Wirtschaftswissenschaftliche Fakultät WWU Münster</string>
     <string name="map_address_juridicum">Universitätsstraße 14, 48143 Münster</string>
@@ -99,6 +121,7 @@
     <string name="map_location_details_view_title">Standort:&#160;</string>
     <string name="map_location_details_view_address">Adresse:&#160;</string>
     <string name="map_location_details_view_description">Mehr Informationen:&#160;</string>
+    <string name="map_view_marker_hint">Für Details berühren Sie den Marker</string>
 
     <string name="error_oncreate_map_location_details_activity">onCreate Error</string>
 
@@ -107,11 +130,13 @@
 
     <!-- Athletics List -->
     <string-array name="athletics_list_items_array">
-        <item>Angebote A-Z</item>
+        <item>Sportangebot A-Z</item>
         <item>Hochschulsport Web Site</item>
         <item>Kontakt</item>
     </string-array>
 
+    <string name="athletics_item_1">Sportangebot A-Z</string>
+    <string name="athletics_item_2">Hochschulsport Web Site</string>
     <string name="athletics_contact_welcome_info">Um den WWU Hochschulsport zu kontaktieren verwenden Sie bitte das folgende Formular:</string>
 
     <!-- Library List -->
@@ -122,6 +147,10 @@
         <item>Kontakt</item>
         <item>ULB Web Site</item>
     </string-array>
+
+    <string name="library_opening_hours">Öffnungszeiten</string>
+    <string name="library_contact">Kontakt</string>
+    <string name="library_web_site">ULB Web Site"</string>
 
     <!-- About List -->
     <string-array name="about_list_items_array">

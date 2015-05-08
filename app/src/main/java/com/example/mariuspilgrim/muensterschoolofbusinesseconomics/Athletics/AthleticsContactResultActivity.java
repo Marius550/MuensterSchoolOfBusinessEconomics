@@ -67,7 +67,7 @@ public class AthleticsContactResultActivity extends Activity {
         String messageMessage= intent.getStringExtra(AthleticsContactActivity.EXTRA_MESSAGE_MESSAGE);
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto","mariuspilgrim@icloud.com", null)); //This should be the WWU email address
+                "mailto", getResources().getString(R.string.target_contact_email_address_athletics), null)); //This should be the WWU email address
 
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.contact_email_subject));
 
@@ -94,7 +94,7 @@ public class AthleticsContactResultActivity extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

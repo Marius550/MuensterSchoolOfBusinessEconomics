@@ -31,19 +31,19 @@ public class LibrarySelectionList extends ListActivity {
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
     String item = (String) getListAdapter().getItem(position);
-    Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+    Toast.makeText(this, item + getResources().getString(R.string.list_item_selected), Toast.LENGTH_LONG).show();
 
     switch (position) {
       case 0:
-          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "http://www.ulb.uni-muenster.de/bibliothek/standorte/alphabet.html";
-          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "Opening Hours";
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.library_opening_hours_url);
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.library_opening_hours);
           Intent intentHours = new Intent(this, WebViewLibrarySelectionUniversal.class);
           startActivity(intentHours);
         break;
       case 1:
         if (isNetworkAvailable() && isOnline())
         {
-            WebViewCatalogSearch.EXTRA_TARGET_URL = "http://katalogix.uni-muenster.de/Katalog/start.do";
+            WebViewCatalogSearch.EXTRA_TARGET_URL = getResources().getString(R.string.library_catalog_url);
             Intent intent = new Intent(this, WebViewCatalogSearch.class);
             startActivity(intent);
         } else {
@@ -53,24 +53,24 @@ public class LibrarySelectionList extends ListActivity {
         }
         break;
       case 2:
-          WebViewLibraryLogin.EXTRA_TARGET_URL = "https://katalogix.uni-muenster.de/Katalog/loginpage.do?methodToCall=showLogin";
+          WebViewLibraryLogin.EXTRA_TARGET_URL = getResources().getString(R.string.library_login_url);
           Intent intentCatalog = new Intent(this, WebViewLibraryLogin.class);
           startActivity(intentCatalog);
         break;
       case 3:
-          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/";
-          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "Ask a Librarian";
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.library_contact_url);
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.library_contact);
           Intent intentContact = new Intent(this, WebViewLibrarySelectionUniversal.class);
           startActivity(intentContact);
         break;
       case 4:
-          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = "https://www.ulb.uni-muenster.de/";
-          WebViewLibrarySelectionUniversal.EXTRA_TITLE = "ULB Web Site";
+          WebViewLibrarySelectionUniversal.EXTRA_TARGET_URL = getResources().getString(R.string.library_web_site_url);
+          WebViewLibrarySelectionUniversal.EXTRA_TITLE = getResources().getString(R.string.library_web_site);
           Intent intentWebsite = new Intent(this, WebViewLibrarySelectionUniversal.class);
           startActivity(intentWebsite);
         break;
       default:
-          WebViewCatalogSearch.EXTRA_TARGET_URL = "http://katalogix.uni-muenster.de/Katalog/start.do";
+          WebViewCatalogSearch.EXTRA_TARGET_URL = getResources().getString(R.string.library_catalog_url);
           Intent intentCatalogDefault = new Intent(this, WebViewCatalogSearch.class);
           startActivity(intentCatalogDefault);
         break;
@@ -86,7 +86,7 @@ public class LibrarySelectionList extends ListActivity {
 
   public Boolean isOnline() {
     try {
-      Process p1 = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.com");
+      Process p1 = java.lang.Runtime.getRuntime().exec(getResources().getString(R.string.test_is_online_url));
       int returnVal = p1.waitFor();
       boolean reachable = (returnVal==0);
       return reachable;
@@ -107,7 +107,7 @@ public class LibrarySelectionList extends ListActivity {
     messageBox.setTitle(method);
     messageBox.setMessage(message);
     messageBox.setCancelable(false);
-    messageBox.setNeutralButton("OK", null);
+    messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
     messageBox.show();
   }
 

@@ -98,4 +98,3 @@ public class WebViewCatalogSearch extends Activity {
         return super.onKeyDown(keyCode, event);
     }
  */
-

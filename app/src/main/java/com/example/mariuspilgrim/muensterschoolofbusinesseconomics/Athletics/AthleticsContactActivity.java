@@ -72,7 +72,7 @@ public class AthleticsContactActivity extends Activity {
             if(isEmailValid(messageEmail)) {
             } else {
                 messageBox( getResources().getString(R.string.edit_email_incorrect_title),
-                        getResources().getString(R.string.edit_email_incorrect));
+                            getResources().getString(R.string.edit_email_incorrect));
                 return false;
             }
 

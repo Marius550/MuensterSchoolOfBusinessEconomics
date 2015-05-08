@@ -62,11 +62,12 @@ public class ContactResultActivity extends Activity {
         String messageMessage= intent.getStringExtra(ContactActivity.EXTRA_MESSAGE_MESSAGE);
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto","mariuspilgrim@icloud.com", null)); //This should be the WWU email address
+                "mailto",getResources().getString(R.string.target_contact_email_address_app_maintenance), null));
 
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.contact_email_subject));
 
-        String completeEmailMessage = "<b>" + messageFirstName + "</b><br/><b>" + messageLastName + "</b><br/><b>" + messageEmail + "</b><br/>" + messageMessage;
+        String completeEmailMessage = "<b>" + messageFirstName + "</b><br/><b>" + messageLastName
+                                            + "</b><br/><b>" + messageEmail + "</b><br/>" + messageMessage;
 
             emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(completeEmailMessage));
         startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.email_chooser)));
@@ -87,7 +88,7 @@ public class ContactResultActivity extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

@@ -167,7 +167,7 @@ public class MapsActionBarActivity extends FragmentActivity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

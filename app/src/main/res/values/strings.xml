@@ -20,7 +20,29 @@
         <item>Campus Tour</item>
     </string-array>
 
-    <!-- Action Bar -->
+    <!-- Controls -->
+    <string name="list_item_selected">&#160;Selected</string>
+    <string name="target_contact_email_address_athletics">mariuspilgrim@icloud.com</string>
+    <string name="target_contact_email_address_app_maintenance">mariuspilgrim@icloud.com</string>
+    <string name="ok">OK</string>
+    <string name="test_is_online_url">ping -c 1 www.google.com</string>
+    <string name="expandable_list_group_position_expanded">&#160;Expanded</string>
+    <string name="expandable_list_group_position_collapsed">&#160;Collapsed</string>
+    <string name="main_menu_search_google_url_q">https://www.google.de/#q=</string>
+    <string name="android_settings_path">com.android.settings</string>
+    <string name="android_settings_language_path">com.android.settings.LanguageSettings</string>
+
+    <!-- Links -->
+    <string name="athletics_course_offer">http://muenster.hochschulsport-nrw.de/angebote/aktueller_zeitraum/m.html</string>
+    <string name="athletics_web_site">https://www.uni-muenster.de/Hochschulsport/en/</string>
+
+    <string name="library_opening_hours_url">http://www.ulb.uni-muenster.de/bibliothek/standorte/alphabet.html</string>
+    <string name="library_catalog_url">http://katalogix.uni-muenster.de/Katalog/start.do</string>
+    <string name="library_web_site_url">https://www.ulb.uni-muenster.de/</string>
+    <string name="library_contact_url">https://www.ulb.uni-muenster.de/bibliothek/ansprechpartner/</string>
+    <string name="library_login_url">https://katalogix.uni-muenster.de/Katalog/loginpage.do?methodToCall=showLogin</string>
+
+    <!-- Contact -->
     <string name="search_hint_action_bar">Search Uni Münster</string>
     <string name="search_added_string_uni_muenster">&#160;Uni Münster</string>
     <string name="search_added_string_ulb_muenster">&#160;ULB Münster</string>
@@ -99,6 +121,7 @@
     <string name="map_location_details_view_title">Location:&#160;</string>
     <string name="map_location_details_view_address">Address:&#160;</string>
     <string name="map_location_details_view_description">More information:&#160;</string>
+    <string name="map_view_marker_hint">For details tap on marker</string>
 
     <string name="error_oncreate_map_location_details_activity">onCreate error</string>
 
@@ -112,6 +135,8 @@
         <item>Contact</item>
     </string-array>
 
+    <string name="athletics_item_1">Sports Offer A-Z</string>
+    <string name="athletics_item_2">Athletics Web Site</string>
     <string name="athletics_contact_welcome_info">To contact the WWU Athletics personnel, please use the following form:</string>
 
     <!-- Library List -->
@@ -122,6 +147,10 @@
         <item>Ask a Librarian</item>
         <item>ULB Web Site</item>
     </string-array>
+
+    <string name="library_opening_hours">Opening Hours</string>
+    <string name="library_contact">Ask a Librarian</string>
+    <string name="library_web_site">ULB Web Site"</string>
 
     <!-- About List -->
     <string-array name="about_list_items_array">

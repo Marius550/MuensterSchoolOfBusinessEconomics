@@ -30,7 +30,6 @@ public class MapsFragmentActivity extends FragmentActivity {
     public static double EXTRA_LATITUDE;
     public static double EXTRA_LONGITUDE;
 
-
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     @Override
@@ -153,7 +152,7 @@ public class MapsFragmentActivity extends FragmentActivity {
                 new MarkerOptions()
                 .position(new LatLng(EXTRA_LATITUDE, EXTRA_LONGITUDE))
                 .title(EXTRA_TITLE + " - " + EXTRA_ADDRESS)
-                .snippet("For details tap on marker")
+                .snippet(getResources().getString(R.string.map_view_marker_hint))
         );
         //Always show text box
         marker.showInfoWindow();
@@ -195,7 +194,7 @@ public class MapsFragmentActivity extends FragmentActivity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

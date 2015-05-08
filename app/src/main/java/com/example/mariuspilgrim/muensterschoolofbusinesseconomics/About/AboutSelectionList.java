@@ -27,7 +27,7 @@ public class AboutSelectionList extends ListActivity {
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
     String item = (String) getListAdapter().getItem(position);
-    Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+    Toast.makeText(this, item + getResources().getString(R.string.list_item_selected), Toast.LENGTH_LONG).show();
 
     if (id == 0) {
       Intent intent = new Intent(this, AboutApp.class);

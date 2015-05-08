@@ -68,7 +68,7 @@ public class MapLocationSelectionList extends Activity {
             @Override
             public void onGroupExpand(int groupPosition) {
                 Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Expanded",
+                        listDataHeader.get(groupPosition) + getResources().getString(R.string.expandable_list_group_position_expanded),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -79,7 +79,7 @@ public class MapLocationSelectionList extends Activity {
             @Override
             public void onGroupCollapse(int groupPosition) {
                 Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Collapsed",
+                        listDataHeader.get(groupPosition) + getResources().getString(R.string.expandable_list_group_position_collapsed),
                         Toast.LENGTH_SHORT).show();
 
             }
@@ -269,7 +269,7 @@ public class MapLocationSelectionList extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 

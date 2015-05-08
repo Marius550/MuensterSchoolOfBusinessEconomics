@@ -68,7 +68,7 @@ public class ContactActivity extends Activity {
             if(isEmailValid(messageEmail)) {
             } else {
                 messageBox( getResources().getString(R.string.edit_email_incorrect_title),
-                        getResources().getString(R.string.edit_email_incorrect));
+                            getResources().getString(R.string.edit_email_incorrect));
                 return false;
             }
 
@@ -130,7 +130,7 @@ public class ContactActivity extends Activity {
         messageBox.setTitle(method);
         messageBox.setMessage(message);
         messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
+        messageBox.setNeutralButton(getResources().getString(R.string.ok), null);
         messageBox.show();
     }
 
